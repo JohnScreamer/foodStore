@@ -43,6 +43,7 @@ const AllGoods: FC = () => {
                         {" "}
                         <DropList
                             name="byType"
+                            ruleName="По типу"
                             options={filterByName}
                             control={control}
                         />
@@ -51,11 +52,12 @@ const AllGoods: FC = () => {
                         {" "}
                         <DropList
                             name="byPrice"
+                            ruleName="По ціні"
                             options={filterByPrice}
                             control={control}
                         />
                     </div>
-                    <CasualBtn brr>Filter</CasualBtn>
+                    <CasualBtn brr>Знайти</CasualBtn>
                 </form>
             </div>
             <div className={s.cardsWrapper}>

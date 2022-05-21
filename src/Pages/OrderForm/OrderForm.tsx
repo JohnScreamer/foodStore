@@ -22,6 +22,7 @@ import ModalWindow from "../../Components/ModalWindow/ModalWindow";
 import OrderDone from "../OrderDone/OrderDone";
 import SectionName from "../../Components/SectionName/SectionName";
 import { useNavigate } from "react-router-dom";
+import PriceError from "../../Components/PriceError/PriceError";
 const OrderForm: FC = () => {
     const [activeFieldsStatus, setFieldsStatus] =
         useState<IActiveFields>(activeFiled);
@@ -39,9 +40,11 @@ const OrderForm: FC = () => {
             dispatch(addOrder(data));
             setShowModalDone(true);
         } else {
+            setPriceError(true);
         }
     };
     const navigate = useNavigate();
+    const [priceError, setPriceError] = useState(false);
 
     return (
         <>
@@ -93,11 +96,11 @@ const OrderForm: FC = () => {
                     <OrderDone />
                 </ModalWindow>
             )}
-            {/* {priceError && (
+            {priceError && (
                 <ModalWindow callback={() => setPriceError(false)}>
                     <PriceError setModalStatus={setPriceError} />
                 </ModalWindow>
-            )} */}
+            )}
         </>
     );
 };

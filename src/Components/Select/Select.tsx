@@ -106,7 +106,7 @@ const DropList: FC<DropListType> = ({
                         }}
                         id="demo-simple-select-label"
                     >
-                        {name}
+                        {ruleName}
                     </InputLabel>
                     <Controller
                         control={control}

@@ -62,8 +62,8 @@ export interface ISelect {
 }
 
 export const filterByPrice: ISelect[] = [
-    { name: "Спочатку дорощі", value: "fromExpensive" },
-    { name: "Спочатку дешевші", value: "fromCheaper" },
+    { name: "Від дорогих до дешевих", value: "fromExpensive" },
+    { name: "ВІд дешевих до дорогих", value: "fromCheaper" },
 ];
 
 export const filterByName: ISelect[] = [
