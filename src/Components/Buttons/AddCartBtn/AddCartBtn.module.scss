@@ -1,0 +1,29 @@
+@import "./../../../scss/SCSSConstants.scss";
+
+.btn {
+    background: $greenGradient;
+    font-weight: 600;
+    @include adaptive-value("font-size", 14, 10);
+    line-height: 17px;
+    @extend %flex-element-center;
+    padding: 10px 19px;
+    @include adaptive-value("padding-top", 10, 8);
+    @include adaptive-value("padding-bottom", 10, 8);
+    @include adaptive-value("padding-left", 19, 12);
+    @include adaptive-value("padding-right", 19, 12);
+    @extend %br10;
+    transition: $trans03;
+    display: inline-flex;
+    &:hover {
+        @extend %bsd;
+    }
+    &:active {
+    }
+    span {
+        margin-right: 15px;
+        @include adaptive-value("margin-right", 15, 10);
+    }
+
+    svg {
+    }
+}

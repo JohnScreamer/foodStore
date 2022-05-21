@@ -1,0 +1,30 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.navWrapper {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navList {
+    font-size: 18px;
+    line-height: 21px;
+    li {
+        display: block;
+
+        a {
+            display: inline-block;
+            height: 100%;
+            padding: 28px 0px 25px 0;
+            box-sizing: border-box;
+            border-bottom: solid 3px transparent;
+
+            &:hover {
+            }
+        }
+        margin: 0 5px;
+    }
+}
+.active {
+    color: red;
+}

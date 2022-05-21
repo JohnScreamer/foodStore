@@ -1,0 +1,21 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.img {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    @include adaptive-value("height", 484, 200);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    animation: myAnim 4s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+    0% {
+    }
+
+    100% {
+    }
+}

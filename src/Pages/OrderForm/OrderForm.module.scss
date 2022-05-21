@@ -1,0 +1,316 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    .payment .paymentWrapper {
+        display: flex;
+    }
+    .deliveryTimeWrapper .deliveryTime {
+        display: flex;
+        margin-bottom: 30px;
+        .h3Wrapper {
+        }
+    }
+    .deliveryTimeWrapper .deliveryTimeContent {
+        display: inline-block;
+        display: flex;
+    }
+    .deliveryTimeWrapper .callBack {
+        top: 100px;
+    }
+    form {
+        .agreement {
+            display: flex;
+            padding: 17px;
+            align-items: center;
+            input[type="checkbox"] + label {
+                display: block;
+                margin: 0.2em;
+                cursor: pointer;
+                padding: 0.2em;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"] + label:before {
+                content: "✔";
+                background: #ffffff;
+                border: 1px solid #e7eef1;
+                border-radius: 0.2em;
+                display: inline-block;
+                width: 1.5em;
+                height: 1.5em;
+                padding-left: 0.3em;
+                padding-top: 0.1em;
+                padding-bottom: 0.3em;
+                margin-right: 0.2em;
+                vertical-align: bottom;
+                color: transparent;
+                transition: 0.2s;
+            }
+
+            input[type="checkbox"] + label:active:before {
+                transform: scale(0);
+            }
+
+            input[type="checkbox"]:checked + label:before {
+                background: #ffffff;
+                border: 1px solid #e7eef1;
+                color: $greenSoft;
+            }
+
+            input[type="checkbox"]:disabled + label:before {
+                transform: scale(1);
+                border-color: #aaa;
+            }
+
+            input[type="checkbox"]:checked:disabled + label:before {
+                transform: scale(1);
+                background-color: #bfb;
+                border-color: #bfb;
+            }
+            .inputAgree {
+            }
+
+            label {
+                font-weight: 500;
+                font-size: 13px;
+                color: $white;
+                line-height: 15px;
+                cursor: pointer;
+
+                b {
+                    font-size: 15px;
+                    color: $greenSoft;
+                    text-decoration: underline;
+                    cursor: help;
+                }
+            }
+            button {
+                margin-left: auto;
+                padding: 17px 50px;
+                @include adaptive-value("padding-left", 50, 17);
+                @include adaptive-value("padding-right", 50, 17);
+            }
+        }
+    }
+
+    .section {
+        color: $white;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 800px;
+        margin-bottom: 20px;
+        padding: 30px;
+        @extend %br10;
+        background: $greyLightGradient;
+
+        div {
+            display: grid;
+            margin: -7.5px;
+        }
+        input {
+            margin: 7.5px;
+        }
+        h3 {
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 30px;
+        }
+    }
+}
+.contactInfo {
+    grid-column: 1fr 1fr;
+    grid-template-areas: "n p";
+    gap: 15px;
+    .name {
+        grid-area: n;
+    }
+    .phone {
+        grid-area: p;
+        position: relative;
+    }
+}
+
+.wrapper .section .delivery {
+    display: grid;
+    padding-right: 169px;
+    @include adaptive-value("padding-right", 169, 0);
+
+    grid-template-areas:
+        "s s h"
+        "f p fo"
+        "c c c";
+    gap: 15px;
+    .street {
+        grid-area: s;
+    }
+    .houseNum {
+        grid-area: h;
+    }
+    .flatNum {
+        grid-area: f;
+    }
+    .porch {
+        grid-area: p;
+    }
+    .floor {
+        grid-area: fo;
+    }
+    .comment {
+        grid-area: c;
+    }
+}
+.selectWrapper {
+    width: 50%;
+    padding: 30px;
+
+    svg {
+        fill: $greenSoft;
+    }
+}
+
+.deliveryBtn {
+    display: flex;
+    flex-direction: row;
+}
+.btnWrapper {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .payment .paymentWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .deliveryTimeWrapper .deliveryTime {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .btnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .contactInfo {
+        grid-column: 1fr 1fr;
+        grid-row: 1fr 1fr;
+        grid-template-areas:
+            "n n"
+            "p p";
+        gap: 15px;
+    }
+    .wrapper .section .delivery {
+        display: grid;
+
+        grid-template-areas:
+            "s "
+            "h "
+            "f "
+            " p"
+            "fo "
+            "c ";
+        gap: 15px;
+    }
+    .wrapper form {
+        .agreement {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            grid-template-areas:
+                "b b"
+                "c l";
+
+            .text {
+                grid-area: l;
+                b {
+                }
+            }
+            .inputLabel {
+                grid-area: c;
+            }
+            button {
+                margin: 0 auto;
+                grid-area: b;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+#callBackH3 {
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    margin-left: 40px;
+    order: 1;
+}
+
+h6 {
+    z-index: 4;
+    padding: 10px;
+    position: absolute;
+    left: 2%;
+    top: 90%;
+    color: red;
+    border-radius: 10px;
+    background: $greyGradient;
+}
+.relative {
+    position: relative;
+}
+.deliveryTimeContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.backBtn {
+    background: none;
+    margin-bottom: 20px;
+    span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $white;
+        border-left: 2px solid $white;
+        transform: rotate(315deg);
+    }
+}
+.topWrapper {
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    @include adaptive-value("margin-bottom", 70, 15);
+    h1 {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    div {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}
+.topWrapper {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: flex-start;
+}

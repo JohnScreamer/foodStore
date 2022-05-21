@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+}
+
+#root {
+    color: #cfcfcf;
+
+    height: 100%;
+    width: 100%;
+    font-family: "Gilroy";
+    font-size: rem(18);
+    button {
+        color: white;
+    }
+}
+
+::-webkit-scrollbar {
+    width: rem(14);
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.794) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72a479 94%);
+    border-radius: 10px;
+
+    &:hover {
+        background: linear-gradient(114.93deg, #39553d 5.11%, #7b9e7f 94%);
+    }
+}
+
+/*--------------------*/

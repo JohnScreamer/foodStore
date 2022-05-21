@@ -1,0 +1,79 @@
+@import "./../../../scss/SCSSConstants.scss";
+
+.plusOne,
+.xOne,
+.xTwo,
+.minus,
+.plusTwo {
+    border-radius: 150px;
+    background: white;
+    display: block;
+    width: 18px;
+    height: 3.27px;
+    @include adaptive-value("width", 18, 12);
+    @include adaptive-value("height", 3.27, 2);
+    background: white;
+}
+
+.plusTwo {
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+.btn {
+    position: relative;
+    @extend %flex-element-center;
+    background: $greenGradient;
+    @extend %br10;
+
+    padding: 20px 22px;
+    @include adaptive-value("padding-left", 22, 15);
+    @include adaptive-value("padding-right", 22, 15);
+    @include adaptive-value("padding-top", 20, 18.5);
+    @include adaptive-value("padding-bottom", 20, 18.5);
+
+    &:hover {
+        @extend %bsd;
+    }
+}
+.br100 {
+    border-radius: 100%;
+}
+.rotate {
+    transform: rotate(135deg);
+    &:hover {
+        background: red;
+    }
+}
+
+.xOne,
+.xTwo {
+    position: absolute;
+}
+.xOne {
+    position: absolute;
+    transform: rotate(180deg);
+}
+.xTwo {
+    left: 7.5px;
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+.small {
+    width: 27px;
+    height: 27px;
+    padding: 10px 10px;
+    .plusOne,
+    .xOne,
+    .xTwo,
+    .minus,
+    .plusTwo {
+        background: white;
+        display: block;
+        width: 12px;
+        position: absolute;
+        height: 3.27px;
+        background: white;
+    }
+}

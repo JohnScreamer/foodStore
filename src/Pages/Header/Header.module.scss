@@ -1,0 +1,116 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.headerWrapper {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    @extend %mw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 15px;
+    @include adaptive-value("padding-top", 24, 10);
+    @include adaptive-value("padding-bottom", 24, 10);
+}
+.logo {
+    margin-right: 72px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    @include adaptive-value("font-size", 25, 16);
+}
+
+.inputWrapper {
+    display: flex;
+    margin-right: 30px;
+    background: $greySoft;
+    @extend %br10;
+    padding: 18px 20px;
+    @include adaptive-value("padding", 18, 10);
+    max-width: 555px;
+    width: 100%;
+    cursor: pointer;
+
+    input {
+        background: none;
+        width: 100%;
+        font-size: 18px;
+        @include adaptive-value("font-size", 18, 14);
+        line-height: 21px;
+        &:focus {
+            border-bottom: 1px solid $greyLight;
+        }
+        &::placeholder {
+            font-size: 18px;
+            line-height: 21px;
+            @include adaptive-value("font-size", 18, 14);
+            color: $greyLight;
+        }
+    }
+
+    .location {
+        margin-right: 14px;
+    }
+    .search {
+        cursor: pointer;
+        &:hover {
+            circle {
+                stroke-width: 2.5;
+            }
+            path {
+                stroke-width: 2.5;
+            }
+        }
+    }
+}
+.contactWrapper {
+    display: flex;
+    margin-right: auto;
+    padding-right: 10px;
+
+    p {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    b {
+        font-size: 12px;
+        color: $greyLight;
+    }
+    span {
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+    }
+}
+.icon {
+    background: $greenGradient;
+    @extend %flex-element-center;
+    padding: 9px;
+    border-radius: 50%;
+    margin-right: 10px;
+    svg {
+    }
+}
+
+@media (max-width: 768px) {
+    .contactWrapper {
+        display: none;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .inputWrapper {
+        order: 4;
+        max-width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .logo {
+        margin: 0;
+    }
+}

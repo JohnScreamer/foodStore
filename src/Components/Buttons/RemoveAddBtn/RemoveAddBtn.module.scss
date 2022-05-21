@@ -1,0 +1,31 @@
+@import "./../../../scss/SCSSConstants.scss";
+
+.text {
+    padding: 11px 0;
+    padding-right: 20px;
+    margin-right: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+    background: $greenGradient;
+    @extend %br10;
+    max-width: 145px;
+    &:hover {
+        @extend %bsd;
+    }
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 7px 14px;
+    padding-left: 24px;
+    svg {
+    }
+}
+.btnRemove {
+    background: linear-gradient(90deg, rgba(96, 180, 58, 1) 0%, rgba(253, 29, 29, 1) 50%, rgb(242, 7, 58) 100%);
+    &:hover {
+        box-shadow: none;
+        background: linear-gradient(90deg, rgb(180, 91, 58) 0%, rgba(253, 29, 29, 1) 50%, rgb(242, 7, 58) 100%);
+    }
+}

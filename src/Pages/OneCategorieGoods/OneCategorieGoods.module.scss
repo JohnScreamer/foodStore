@@ -1,0 +1,82 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.wrapper {
+    .cardsWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1920px;
+        padding: 15px 15px 60px 15px;
+
+        overflow: hidden;
+        justify-content: center;
+
+        .cardWrapper {
+            width: 325px;
+            @include adaptive-value("width", 325, 250);
+            min-height: 330px;
+            margin: 15px;
+            transition: $trans1;
+
+            &:hover {
+                transition: $trans1;
+                z-index: 2;
+                transform: none;
+                box-shadow: 5px 10px 30px black;
+                background: rgb(45, 45, 45);
+                display: flex;
+                position: relative;
+                @extend %br10;
+
+                img {
+                    animation: imgAnim 12s ease 0s 1 normal forwards;
+                }
+                .cardHeader {
+                }
+            }
+        }
+        li {
+            margin: 0;
+            &:hover {
+                position: absolute;
+            }
+        }
+    }
+}
+@keyframes imgAnim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.inputWrapper {
+    max-width: 300px;
+}
+.Filter {
+    form {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .Filter {
+        form {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            div {
+                margin-top: 5px;
+            }
+            button {
+                margin-top: 5px;
+                width: 100%;
+            }
+        }
+    }
+}

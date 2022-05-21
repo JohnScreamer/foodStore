@@ -1,0 +1,108 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.cardWrapper {
+    padding: 20px 44px 20px 20px;
+    @include adaptive-value("padding", 20, 7);
+    font-weight: 700;
+    font-size: 20px;
+    @include adaptive-value("font-size", 20, 9);
+    color: $white;
+
+    display: flex;
+    align-items: center;
+    .imgLink {
+        display: block;
+        max-width: 117px;
+        height: 86px;
+        margin-right: 39px;
+        width: 100%;
+    }
+    img {
+        object-fit: cover;
+
+        height: 100%;
+        width: 100%;
+    }
+
+    .textWrapper {
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            max-width: 350px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 18px;
+            @include adaptive-value("font-size", 18, 14);
+            line-height: 22px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #a6a7ab;
+        }
+    }
+
+    .cardNav {
+        width: 50%;
+        align-items: center;
+        display: flex;
+
+        .amount {
+            width: 50px;
+            @include adaptive-value("width", 50, 15);
+            text-align: center;
+            @include adaptive-value("font-size", 20, 12);
+        }
+    }
+    .cardPrice {
+        align-items: center;
+        display: flex;
+        .price {
+            display: inline-block;
+            min-width: 100px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .cardWrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 130px 1fr 1fr;
+        grid-template-areas:
+            "i t t"
+            "i n p";
+        .imgLink {
+            grid-area: i;
+        }
+        img {
+        }
+        .textWrapper {
+            grid-area: t;
+            h2 {
+            }
+            p {
+                display: none;
+            }
+        }
+
+        .cardNav {
+            grid-area: n;
+            width: 100%;
+            justify-content: end;
+
+            .amount {
+            }
+        }
+        .cardPrice {
+            grid-area: p;
+            .price {
+                min-width: 0;
+                margin-left: auto;
+                margin-right: 5px;
+            }
+        }
+    }
+}

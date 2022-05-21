@@ -1,0 +1,28 @@
+@import "./../../scss/SCSSConstants.scss";
+.input {
+    background: none;
+    padding: 20px 0 20px 30px;
+    @extend %br10;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+.input::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    padding: 20px 0 20px 0px;
+}
+.w100 {
+    width: 100%;
+}
+.w50 {
+    width: 50%;
+}
+.w25 {
+    width: 25%;
+}
+.error {
+    box-shadow: inset 0px 5px 5px rgba(255, 0, 0, 0.454);
+}

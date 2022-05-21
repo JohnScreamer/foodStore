@@ -1,0 +1,68 @@
+@import "./../../../scss/SCSSConstants.scss";
+
+.text {
+}
+
+.top,
+.mid,
+.bottom {
+    display: block;
+    background: #65906c;
+    border-radius: 50px;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 4px;
+}
+.bottom {
+    margin-bottom: 5.8px;
+}
+
+.btn {
+    background: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: $trans1;
+    &:hover {
+        .top {
+            position: relative;
+            left: 5px;
+        }
+        .mid {
+            position: relative;
+            right: 2px;
+        }
+    }
+}
+
+.active {
+    background: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    .bottom {
+        top: -5px;
+        position: relative;
+        transform: rotate(145deg);
+        animation: botAnim 1s ease 0s 1 normal forwards;
+    }
+    .top {
+        position: relative;
+        transform: rotate(-145deg);
+        top: 9px;
+        animation: topAnim 1s ease 0s 1 normal forwards;
+    }
+    .mid {
+        position: relative;
+        left: -1000px;
+        animation: midAnim 1s ease 0s 1 normal forwards;
+    }
+}
+
+@media (max-width: 768px) {
+    .active,
+    .btn {
+        display: flex;
+    }
+}

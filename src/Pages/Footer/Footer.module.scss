@@ -1,0 +1,97 @@
+@import "./../../scss/SCSSConstants.scss";
+.footer {
+    padding: 26px 15px;
+    margin: 0 auto;
+    max-width: 1302px;
+    .container {
+        display: flex;
+        align-items: center;
+        button {
+            width: 64px;
+            height: 64px;
+            @include adaptive-value("width", 64, 50);
+            @include adaptive-value("height", 64, 50);
+            @extend %flex-element-center;
+
+            background: $white;
+            position: relative;
+            border-radius: 50px;
+            margin-right: 55px;
+            @include adaptive-value("margin-right", 55, 10);
+            &:hover {
+                background: $greenGradient;
+                .left {
+                    border-top: 3px solid $white;
+                    border-right: 3px solid $white;
+                }
+            }
+            .left {
+                top: 5px;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+                position: relative;
+                transform: rotate(315deg);
+            }
+        }
+
+        .footerInfoWrapper {
+            display: flex;
+            flex-direction: column;
+            margin-right: 88px;
+            @include adaptive-value("margin-right", 80, 5);
+            div {
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 25px;
+                letter-spacing: 0.15em;
+                color: $white;
+                margin-bottom: 15px;
+            }
+            span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                text-align: start;
+                margin-bottom: 5px;
+
+                color: #cfcfcf;
+            }
+            a {
+                font-weight: 500;
+                line-height: 16px;
+                color: $white;
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 5px;
+            }
+        }
+        .footerLinks {
+            a {
+                font-size: 20px;
+                @include adaptive-value("font-size", 20, 10);
+                line-height: 24px;
+                margin-right: 40px;
+                @include adaptive-value("margin-right", 40, 5);
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footerLinks {
+        display: none;
+    }
+    .footerInfoWrapper {
+        text-align: center;
+    }
+    .container {
+        justify-content: center;
+        button {
+            align-self: start;
+        }
+    }
+}

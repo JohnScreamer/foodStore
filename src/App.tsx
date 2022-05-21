@@ -1,58 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.scss";
+import CardPage from "./Pages/CardPage/CardPage";
+import Footer from "./Pages/Footer/Footer";
+import AllGoods from "./Pages/AllGoods/AllGoods";
+import Header from "./Pages/Header/Header";
+import Main from "./Pages/Main/Main";
+import { useAppDispatch } from "./Hooks/common";
+import { useEffect, useState } from "react";
+import { RequestAllGoods } from "./Redux/Reducers/GoodsReducer";
+import OneCategorieGoods from "./Pages/OneCategorieGoods/OneCategorieGoods";
+import Cart from "./Pages/Cart/Cart";
+import ModalWindow from "./Components/ModalWindow/ModalWindow";
+import EmptyCartError from "./Components/EmptyCartError/EmptyCartError";
+import OrderForm from "./Pages/OrderForm/OrderForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+    const dispatch = useAppDispatch();
+    const [showModal, setModalStatus] = useState(false);
+
+    useEffect(() => {
+        dispatch(RequestAllGoods());
+    }, []);
+    return (
+        <div className="App">
+            <Header setModalStatus={setModalStatus} />
+            {showModal && (
+                <ModalWindow callback={(status) => setModalStatus(status)}>
+                    <EmptyCartError setModalStatus={setModalStatus} />
+                </ModalWindow>
+            )}
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route
+                    path="/categories/:type"
+                    element={<OneCategorieGoods />}
+                />
+                <Route path="/allGoods" element={<AllGoods />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/order" element={<OrderForm />} />
+                <Route path="/goods/:id" element={<CardPage />} />
+
+                <Route path="/*" element={<>404</>} />
+            </Routes>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

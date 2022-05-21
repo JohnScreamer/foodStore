@@ -1,0 +1,44 @@
+@import "./../../scss/SCSSConstants.scss";
+.totalPriceWrapper {
+    @extend %br10;
+    background: $greyLightGradient;
+    max-width: 763px;
+    padding: 10px 30px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .content {
+        .price {
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 700;
+            color: $white;
+        }
+        .priceWrapper {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #a6a7ab;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            span {
+                color: $greenSoft;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .totalPriceWrapper {
+        flex-direction: column;
+        button {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+}

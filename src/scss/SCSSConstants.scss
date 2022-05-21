@@ -1,0 +1,79 @@
+//variable
+$greenGradient: linear-gradient(114.93deg, #618967 5.11%, #72a479 94%);
+$greenSoft: #79b382;
+$greenDeep: #618967;
+$greyGradient: linear-gradient(360deg, #211f20 0%, #44403f 100%);
+$greyReversGradient: linear-gradient(270.7deg, #44403f 0.4%, #211f20 100%);
+$greyLightGradient: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+
+$greySoft: #504b4a;
+$greyDeep: #403c3b;
+
+$white: #fff;
+
+$greyLight: #cfcfcf;
+
+$borderSectionColor: 1px solid rgba(255, 255, 255, 0.1);
+
+$trans03: all ease 0.3s;
+$trans05: all ease 1s;
+$trans1: all ease 0.5s;
+
+//------- adaptive
+@function rem($px) {
+    $result: calc($px/ 16) + rem;
+    @return $result;
+}
+
+@function em($px, $current: 16) {
+    $result: calc($px / $current) + em;
+    @return $result;
+}
+
+@function percent($px, $from) {
+    $result: calc(($px/$from) * 100%);
+    @return $result;
+}
+
+// /----mixin--
+
+$maxWidthContainer: 1302;
+$maxWidth: 1920;
+
+@mixin adaptive-value($property, $startSize, $minSize, $type: 1) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        @media (max-width: #{$maxWidthContainer +px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type==2 {
+        #{$property}: $startSize + px;
+
+        @media (min-width: calc(#{$maxWidthContainer + px})) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{maxWidth - 320}));
+        }
+    } @else {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{maxWidth - 320}));
+    }
+}
+// ------template----
+%flex-element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%br10 {
+    border-radius: 10px;
+}
+
+%bsd {
+    box-shadow: 0px 5px 10px rgba(114, 163, 121, 0.7);
+}
+
+%mw {
+    max-width: 1302px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

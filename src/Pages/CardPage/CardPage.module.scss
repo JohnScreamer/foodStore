@@ -1,0 +1,169 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.wrapper {
+    max-width: 1920px;
+    padding: 0 15px;
+    overflow: hidden;
+    .goBackBtnWrapper {
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+    label {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-top: 44px;
+        margin-bottom: 28px;
+    }
+    .btnBack {
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        background: $greenGradient;
+        border-radius: 50px;
+        span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid $white;
+            border-right: 2px solid $white;
+            transform: rotate(225deg);
+            position: relative;
+            left: 2px;
+        }
+    }
+
+    .cardWrapper {
+        max-width: 1210px;
+        @extend %br10;
+        margin: 0 auto;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "i c ";
+
+        background: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+        color: $white;
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            grid-area: i;
+        }
+        .cardContent {
+            width: 100%;
+            padding: 38px 10px 93px 50px;
+            @include adaptive-value("padding-left", 50, 0);
+            @include adaptive-value("padding-bottom", 93, 20);
+            @include adaptive-value("padding-top", 38, 10);
+            display: flex;
+            grid-area: c;
+            flex-direction: column;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 5px;
+            @include adaptive-value("font-size", 25, 18);
+        }
+        p {
+            font-size: 14px;
+            line-height: 16px;
+            color: $greyLight;
+            margin-bottom: auto;
+        }
+        .weightCapacity {
+            font-size: 14px;
+            line-height: 16px;
+
+            margin-bottom: 22px;
+        }
+        .price {
+            font-weight: 700;
+            font-size: 25px;
+            @include adaptive-value("font-size", 25, 16);
+            line-height: 30px;
+            order: 2;
+            margin-left: 25px;
+            @include adaptive-value("margin-left", 25, 10);
+        }
+    }
+}
+.cardBottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .navWrapper {
+        display: none;
+    }
+    .wrapper {
+        padding: 0;
+
+        .cardWrapper {
+            border-radius: 0;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+
+            .cardContent {
+                padding: 10px 15px;
+                .weightCapacity,
+                h3,
+                p {
+                    text-align: center;
+                }
+                p {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .cardBottom {
+        justify-content: center;
+    }
+    .wrapper .cardWrapper img {
+        max-width: 768px;
+        width: 100%;
+        height: 400px;
+        @include adaptive-value("height", 400, 250);
+    }
+
+    .goBackBtnWrapper {
+        position: relative;
+        label {
+            display: none;
+        }
+        .btnBack {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            background: $white;
+            width: 37px;
+            height: 37px;
+
+            span {
+                border-top: solid 3px $greenDeep;
+                border-right: solid 3px $greenDeep;
+                width: 12px;
+                height: 12px;
+                top: 1px;
+            }
+        }
+    }
+}
+.recommendation {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    @include adaptive-value("margin", 50, 20);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wrapper .cardWrapper .cardContent {
+}

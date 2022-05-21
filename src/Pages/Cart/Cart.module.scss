@@ -1,0 +1,51 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.wrapper {
+    max-width: 1920px;
+    padding: 34px 15px;
+    .container {
+        margin: 0 auto;
+        max-width: 1100px;
+        background: $greyLightGradient;
+        @extend %br10;
+        margin-bottom: 40px;
+    }
+    .container li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .container li:last-child {
+        border-bottom: none;
+    }
+}
+.amountItem {
+    font-size: 15px;
+    line-height: 18px;
+
+    text-transform: lowercase;
+
+    color: #72a479;
+}
+.backBtn {
+    background: none;
+    margin-bottom: 20px;
+    span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $white;
+        border-left: 2px solid $white;
+        transform: rotate(315deg);
+    }
+}
+.topWrapper {
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    @include adaptive-value("margin-bottom", 70, 15);
+    h1 {
+        margin: 0;
+    }
+    div {
+        padding: 0;
+    }
+}
