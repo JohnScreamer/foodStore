@@ -4,7 +4,10 @@
     @extend %br10;
     overflow: hidden;
     display: flex;
+    max-width: 1210px;
     background: $greyDeep;
+    margin: 0 auto;
+
     .img {
         animation: myAnim 1s ease 0s infinite normal forwards;
         width: 50%;

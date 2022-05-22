@@ -1,12 +1,16 @@
 export interface IFormOrder {
-    contactInfo: {
-        name: string;
-        phone: number;
-    };
-    deliveryType: IDelivery | ISelfPickup;
-    paymentType: ICash | IOnlineCard | ICourierCard;
-    deliveryTime: IInTime | IAsFastAsPossible;
-    IsAgree: boolean;
+    name: string;
+    phone: number;
+    person?: number;
+    callBack: boolean;
+    street?: string;
+    houseNumber?: number;
+    flatNum?: number;
+    floor?: number;
+    comment?: string;
+    porchNumber?: number;
+    restaurant?: "malibu" | "legend" | "friday" | "caribu";
+    agreement: true;
 }
 
 export interface IActiveFields {
@@ -61,3 +65,12 @@ export const restaurants = [
     { name: "Пятниця", value: "friday" },
     { name: "Кариби", value: "caribu" },
 ];
+
+// deliveryType: "delivery" | "selfPickup";
+// paymentType: "cash" | "onlineCard" | "courierCard";
+// deliveryTime: "inTime" | "asFast";
+
+// deliveryType: IDelivery | ISelfPickup;
+// paymentType: ICash | IOnlineCard | ICourierCard;
+// deliveryTime: IInTime | IAsFastAsPossible;
+// IsAgree: boolean;

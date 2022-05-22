@@ -6,7 +6,7 @@ import AllGoods from "./Pages/AllGoods/AllGoods";
 import Header from "./Pages/Header/Header";
 import Main from "./Pages/Main/Main";
 import { useAppDispatch } from "./Hooks/common";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RequestAllGoods } from "./Redux/Reducers/GoodsReducer";
 import OneCategorieGoods from "./Pages/OneCategorieGoods/OneCategorieGoods";
 import Cart from "./Pages/Cart/Cart";
@@ -17,13 +17,14 @@ import OrderForm from "./Pages/OrderForm/OrderForm";
 function App() {
     const dispatch = useAppDispatch();
     const [showModal, setModalStatus] = useState(false);
+    const headerRef = useRef(null);
 
     useEffect(() => {
         dispatch(RequestAllGoods());
     }, []);
     return (
         <div className="App">
-            <Header setModalStatus={setModalStatus} />
+            <Header setModalStatus={setModalStatus} headerRef={headerRef} />
             {showModal && (
                 <ModalWindow callback={(status) => setModalStatus(status)}>
                     <EmptyCartError setModalStatus={setModalStatus} />
@@ -42,7 +43,7 @@ function App() {
 
                 <Route path="/*" element={<>404</>} />
             </Routes>
-            <Footer />
+            <Footer headerRef={headerRef} />
         </div>
     );
 }

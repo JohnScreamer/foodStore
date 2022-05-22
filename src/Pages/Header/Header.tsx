@@ -1,5 +1,6 @@
-import { FC, MouseEventHandler, useEffect, useRef } from "react";
+import { FC, MouseEventHandler, useEffect, useRef, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import BurgerPopUp from "../../Components/BurgerPopUp/BurgerPopUp";
 import Burger from "../../Components/Buttons/Burger/Burger";
 import ToCartBtn from "../../Components/Buttons/ToCartBtn/ToCartBtn";
 import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
@@ -7,28 +8,33 @@ import PictureSlider from "../../Components/PictureSlider/PictureSlider";
 import s from "./Header.module.scss";
 interface IHeader {
     setModalStatus: (status: boolean) => void;
+    headerRef: any;
 }
-const Header: FC<IHeader> = ({ setModalStatus }) => {
+const Header: FC<IHeader> = ({ setModalStatus, headerRef }) => {
     const searchRef = useRef(null);
     const inputRef: any = useRef(null);
     const data = useParams();
-    console.log("header");
+    const burgerRef = useRef(null);
 
-    const showe = (e: any) => {
+    const show = (e: any) => {
         if (e.target !== searchRef.current) {
             inputRef.current.focus();
         }
     };
-
+    const [showPopUpBurger, setPopUpStatus] = useState(false);
     return (
         <div className={s.headerWrapper}>
-            <header>
+            <header ref={headerRef}>
                 <div className={s.container}>
-                    <Burger toggleModal={() => {}} />
+                    <Burger
+                        showPopUpBurger={showPopUpBurger}
+                        toggleModal={setPopUpStatus}
+                        burgerRef={burgerRef}
+                    />
                     <NavLink className={s.logo} to="/">
                         LOGOS
                     </NavLink>
-                    <div className={s.inputWrapper} onClick={showe}>
+                    <div className={s.inputWrapper} onClick={show}>
                         <svg
                             className={s.location}
                             width="24"
@@ -127,6 +133,13 @@ const Header: FC<IHeader> = ({ setModalStatus }) => {
                     <ToCartBtn setModalStatus={setModalStatus} />
                 </div>
             </header>
+            {showPopUpBurger && (
+                <BurgerPopUp
+                    setPopUpStatus={setPopUpStatus}
+                    showPopUpBurger={showPopUpBurger}
+                    burgerRef={burgerRef}
+                />
+            )}
         </div>
     );
 };

@@ -1,16 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { FetchAddOrder } from "../../Api/ApiRequest";
+import { IFormOrder } from "../../InterfacesTypes/FormOrderTypes";
 
 export interface IUserInitState {
-    orderHistory: Array<any>;
+    orderHistory: Array<IFormOrder>;
     isLoading: boolean;
     error: null | string;
+    lastOrder: IFormOrder | null;
 }
 
 const initialState: IUserInitState = {
     orderHistory: [],
     isLoading: false,
     error: null,
+    lastOrder: null,
 };
 
 const UserProfileReducer = createSlice({
@@ -21,6 +24,7 @@ const UserProfileReducer = createSlice({
         builder
             .addCase(addOrder.fulfilled, (state, action) => {
                 state.orderHistory = [...state.orderHistory, action.payload];
+                state.lastOrder = action.payload;
                 state.isLoading = false;
             })
             .addCase(addOrder.pending, (state) => {

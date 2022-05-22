@@ -2,7 +2,6 @@
 .wrapper {
     width: 325px;
     @include adaptive-value("width", 325, 250);
-    width: 100%;
     z-index: 1;
     @extend %br10;
     background: linear-gradient(90deg, rgb(42, 41, 40) 0%, rgb(62, 61, 60) 50%, rgb(134, 128, 126) 100%);
@@ -87,5 +86,6 @@
 .list {
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
 }

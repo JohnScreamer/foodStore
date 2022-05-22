@@ -1,10 +1,16 @@
+import { FC } from "react";
 import s from "./Footer.module.scss";
-
-const Footer = () => {
+interface IFotter {
+    headerRef: any;
+}
+const Footer: FC<IFotter> = ({ headerRef }) => {
+    const scrollToHeader = () => {
+        headerRef.current.scrollIntoView();
+    };
     return (
         <footer className={s.footer}>
             <div className={s.container}>
-                <button>
+                <button onClick={scrollToHeader}>
                     <span className={s.left}></span>
                     <span className={s.right}></span>
                 </button>

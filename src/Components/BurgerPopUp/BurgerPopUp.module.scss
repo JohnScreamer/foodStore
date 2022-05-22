@@ -1,0 +1,30 @@
+@import "./../../scss/SCSSConstants.scss";
+.burgerPopUp {
+    position: absolute;
+    padding: 15px;
+    z-index: 10;
+    background: $greyDeep;
+    box-shadow: 10px 10px 10px black;
+    width: 100%;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    ul {
+        li {
+            button {
+                font-size: 18px;
+                padding: 10px;
+                background: none;
+            }
+        }
+    }
+}
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

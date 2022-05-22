@@ -1,0 +1,83 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.wrapper {
+    max-width: 1920px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.benefits {
+    max-width: 1363px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 71px 100px 71px 70px;
+    @include adaptive-value("padding", 70, 0);
+    width: 100%;
+
+    .content {
+        width: 50%;
+        h2 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 32px;
+
+            line-height: 39px;
+            margin-bottom: 25px;
+
+            color: #ffffff;
+        }
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            color: #cfcfcf;
+        }
+    }
+    .btn {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+        @include adaptive-value("width", 50%, 50%);
+        font-size: 18px;
+        line-height: 25px;
+
+        button {
+            background: rgba(80, 75, 74, 0.806);
+            backdrop-filter: blur(4px);
+            min-width: 150px;
+            min-height: 150px;
+            margin: 7.5px;
+            span {
+                display: block;
+            }
+            svg {
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                svg {
+                }
+                span {
+                    color: #79b282;
+                }
+                box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .wrapper {
+        .benefits .btn {
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        display: none;
+    }
+}

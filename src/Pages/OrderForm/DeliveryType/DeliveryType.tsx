@@ -73,17 +73,44 @@ const DeliveryType: FC<any> = ({
                                     placeholder="Номер будика"
                                 />
                             </div>
-                            <div className={s.flatNum}>
-                                <Input number placeholder="Номер квартири" />
+                            <div className={classNames(s.flatNum, s.relative)}>
+                                {errors.houseNumber && (
+                                    <h6>Обовязкове поле.</h6>
+                                )}
+                                <Input
+                                    control={{
+                                        ...register("flatNum"),
+                                        required: true,
+                                    }}
+                                    number
+                                    placeholder="Номер квартири"
+                                />
                             </div>
                             <div className={s.porch}>
-                                <Input number placeholder="Підїзд" />
+                                <Input
+                                    control={{
+                                        ...register("porch"),
+                                    }}
+                                    number
+                                    placeholder="Підїзд"
+                                />
                             </div>
                             <div className={s.floor}>
-                                <Input number placeholder="Поверх" />
+                                <Input
+                                    control={{
+                                        ...register("floor"),
+                                    }}
+                                    number
+                                    placeholder="Поверх"
+                                />
                             </div>
                             <div className={s.comment}>
-                                <Input placeholder="Коментарій" />
+                                <Input
+                                    control={{
+                                        ...register("comment"),
+                                    }}
+                                    placeholder="Коментарій"
+                                />
                             </div>
                         </div>
                     </>

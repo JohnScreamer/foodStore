@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
 import Input from "../../Components/Input/Input";
@@ -19,11 +19,15 @@ import Payment from "./Payment/Payment";
 import { useAppDispatch, useAppSelector } from "../../Hooks/common";
 import { addOrder } from "../../Redux/Reducers/UserProfile";
 import ModalWindow from "../../Components/ModalWindow/ModalWindow";
-import OrderDone from "../OrderDone/OrderDone";
+import OrderDone from "../../Components/OrderDone/OrderDone";
 import SectionName from "../../Components/SectionName/SectionName";
 import { useNavigate } from "react-router-dom";
 import PriceError from "../../Components/PriceError/PriceError";
+import LoadingApiRequest from "../../Components/LoadingApiRequest/LoadingApiRequest";
 const OrderForm: FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [activeFieldsStatus, setFieldsStatus] =
         useState<IActiveFields>(activeFiled);
     const {
@@ -33,8 +37,10 @@ const OrderForm: FC = () => {
         formState: { errors },
     } = useForm();
     const totalPrice = useAppSelector((state) => state.cart.totalPrice);
+    const { isLoading, error } = useAppSelector((state) => state.UserProfile);
     const dispatch = useAppDispatch();
     const [showModalDone, setShowModalDone] = useState(false);
+
     const onSubmit: SubmitHandler<any> = (data) => {
         if (totalPrice > 300) {
             dispatch(addOrder(data));
@@ -49,6 +55,7 @@ const OrderForm: FC = () => {
     return (
         <>
             <main className={s.wrapper}>
+                {isLoading && <LoadingApiRequest />}
                 <div className={s.topWrapper}>
                     <button
                         className={s.backBtn}

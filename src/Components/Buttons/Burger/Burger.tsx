@@ -3,15 +3,16 @@ import { FC, useEffect, useRef, useState } from "react";
 import s from "./Burger.module.scss";
 
 interface IBurger {
-    toggleModal: () => void;
+    toggleModal: (showPopUpBurger: boolean) => void;
+    showPopUpBurger: boolean;
+    burgerRef: any;
 }
 
-const Burger: FC<IBurger> = ({ toggleModal }) => {
+const Burger: FC<IBurger> = ({ toggleModal, showPopUpBurger, burgerRef }) => {
     const [activeBurg, setActiveBurg] = useState(false);
-    const burgerRef = useRef(null);
 
     const burgerHandler = () => {
-        toggleModal();
+        toggleModal(!showPopUpBurger);
         setActiveBurg((prev) => !prev);
     };
     const closeBurger = (e: any) => {

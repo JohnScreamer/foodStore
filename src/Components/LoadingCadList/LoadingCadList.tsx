@@ -6,7 +6,6 @@ interface ILoadingCardList {
 
 const LoadingCardList: FC<ILoadingCardList> = ({ num }) => {
     const itemNum = Array(num).fill(null);
-    console.log(itemNum);
 
     const loadingCardList = itemNum.map((el, index) => (
         <div key={index} className={s.wrapper}>
@@ -25,7 +24,7 @@ const LoadingCardList: FC<ILoadingCardList> = ({ num }) => {
         </div>
     ));
 
-    return <div className={s.list}>{loadingCardList}</div>;
+    return <>{loadingCardList}</>;
 };
 
 export default LoadingCardList;

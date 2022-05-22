@@ -27,6 +27,7 @@ const OneCategorieGoods = () => {
 
     const dispatch = useAppDispatch();
     useEffect(() => {
+        window.scrollTo(0, 0);
         dispatch(
             RequestOneGoodsType(
                 categorie as
