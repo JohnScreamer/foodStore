@@ -126,10 +126,14 @@ input {
     width: auto;
 }
 .navBarInner .swiper {
+    max-width: 1302px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 .navBarInner .swiper-wrapper {
+    max-width: 1302px;
+    margin: 0 auto;
     overflow: visible;
     a {
     }
