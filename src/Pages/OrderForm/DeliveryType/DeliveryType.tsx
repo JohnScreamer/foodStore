@@ -74,15 +74,15 @@ const DeliveryType: FC<any> = ({
                                 />
                             </div>
                             <div className={classNames(s.flatNum, s.relative)}>
-                                {errors.houseNumber && (
-                                    <h6>Обовязкове поле.</h6>
-                                )}
+                                {errors.flatNum && <h6>Обовязкове поле.</h6>}
                                 <Input
-                                    control={{
-                                        ...register("flatNum"),
-                                        required: true,
-                                    }}
                                     number
+                                    error={errors.flatNum}
+                                    control={{
+                                        ...register("flatNum", {
+                                            required: true,
+                                        }),
+                                    }}
                                     placeholder="Номер квартири"
                                 />
                             </div>

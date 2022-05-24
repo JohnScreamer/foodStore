@@ -58,9 +58,14 @@ const CartReducer = createSlice({
                 }
             });
         },
+        clearCart(state) {
+            state.cart = [];
+            state.amountItemInCart = 0;
+            state.totalPrice = 0;
+        },
     },
 });
 
 export default CartReducer.reducer;
-export const { addToCart, removeItemFromCart, deleteItemFromCart } =
+export const { addToCart, removeItemFromCart, deleteItemFromCart, clearCart } =
     CartReducer.actions;

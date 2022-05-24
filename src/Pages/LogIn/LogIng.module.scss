@@ -1,0 +1,25 @@
+@import "./../../scss/SCSSConstants.scss";
+.logIn {
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        label {
+            font-size: 20px;
+            text-align: start;
+            margin-top: 15px;
+            margin-bottom: 9px;
+        }
+        input {
+            background: none;
+            border-bottom: 1px solid $greenSoft;
+            margin-bottom: 10px;
+            font-size: 23px;
+            padding-bottom: 2px;
+        }
+    }
+}

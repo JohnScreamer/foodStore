@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IFilter } from "../InterfacesTypes/GoodsInterface";
+import { ILogInData, IProfile } from "../Redux/Reducers/UserProfile";
 
 const URL = "http://localhost:3003";
 
@@ -27,4 +28,23 @@ export const FetchFilterGoods = (data: IFilter) => {
 
 export const FetchAddOrder = (order: any) => {
     return BaseRequest.post("/orders", { ...order });
+};
+export const FetchDiscounList = () => {
+    return BaseRequest.get("/DiscountArr");
+};
+///////profile////
+export const FetchSigIn = (profile: IProfile) => {
+    return BaseRequest.post("/profile", { ...profile });
+};
+export const FetchLogIn = (logInData: ILogInData) => {
+    return BaseRequest.get(
+        `/profile?name=${logInData.name}&password=${logInData.password}`
+    );
+};
+////admin///
+export const FetchGetAllOrders = () => {
+    return BaseRequest.get("/orders");
+};
+export const FetchGetAllProfiles = () => {
+    return BaseRequest.get("/Profile");
 };

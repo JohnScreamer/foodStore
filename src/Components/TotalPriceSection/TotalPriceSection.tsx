@@ -7,7 +7,7 @@ const TotalPriceSection: FC<any> = ({ setPriceError }) => {
     const navigate = useNavigate();
     const totalPrice = useAppSelector((state) => state.cart.totalPrice);
     const toOrder = () => {
-        if (totalPrice > 300) {
+        if (totalPrice > 299) {
             navigate("/order");
             return;
         }

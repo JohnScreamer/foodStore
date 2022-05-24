@@ -8,6 +8,7 @@
 
 .navList {
     font-size: 18px;
+    @include adaptive-value("font-size", 18, 15);
     line-height: 21px;
     li {
         display: block;
@@ -16,6 +17,8 @@
             display: inline-block;
             height: 100%;
             padding: 28px 0px 25px 0;
+            @include adaptive-value("padding-top", 25, 15);
+            @include adaptive-value("padding-bottom", 25, 15);
             box-sizing: border-box;
             border-bottom: solid 3px transparent;
 
@@ -25,6 +28,7 @@
         margin: 0 5px;
     }
 }
+
 .active {
     color: red;
 }

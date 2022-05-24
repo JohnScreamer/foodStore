@@ -42,7 +42,11 @@ const OrderForm: FC = () => {
     const [showModalDone, setShowModalDone] = useState(false);
 
     const onSubmit: SubmitHandler<any> = (data) => {
-        if (totalPrice > 300) {
+        console.log(data);
+
+        if (totalPrice > 299) {
+            console.log("byu");
+
             dispatch(addOrder(data));
             setShowModalDone(true);
         } else {
@@ -51,6 +55,7 @@ const OrderForm: FC = () => {
     };
     const navigate = useNavigate();
     const [priceError, setPriceError] = useState(false);
+    console.log(errors, totalPrice);
 
     return (
         <>
@@ -104,7 +109,7 @@ const OrderForm: FC = () => {
                 </ModalWindow>
             )}
             {priceError && (
-                <ModalWindow callback={() => setPriceError(false)}>
+                <ModalWindow hasBtnClose callback={() => setPriceError(false)}>
                     <PriceError setModalStatus={setPriceError} />
                 </ModalWindow>
             )}

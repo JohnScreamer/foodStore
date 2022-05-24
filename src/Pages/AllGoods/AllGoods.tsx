@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
 import GoodsCard from "../../Components/GoodsCard/GoodsCard";
@@ -33,6 +33,9 @@ const AllGoods: FC = () => {
     const onSubmit: SubmitHandler<any> = (data: IFilter) => {
         dispatch(FilterGoods(data));
     };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <main className={s.wrapper}>

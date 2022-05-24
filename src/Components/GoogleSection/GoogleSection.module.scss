@@ -1,0 +1,140 @@
+@import "./../../scss/SCSSConstants.scss";
+.contactWrapper {
+    height: 560px;
+    max-width: 1920px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    background: url("./../../../public/static/Group22.png");
+    background-position: center;
+    background-size: cover;
+    .container {
+        padding: 0 15px;
+        max-width: 1332px;
+        height: 100%;
+
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 40px;
+    }
+    .infoBlock {
+        display: inline-block;
+        background: #2e2b2c;
+        padding: 22px 40px;
+        @include adaptive-value("padding-top", 22, 10);
+        @include adaptive-value("padding-bottom", 22, 10);
+        @include adaptive-value("padding-left", 22, 15);
+        @include adaptive-value("padding-right", 40, 15);
+        box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        max-width: 550px;
+        .contactInfo {
+            svg {
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 30px;
+                @include adaptive-value("font-size", 30, 18);
+                line-height: 36px;
+                text-transform: uppercase;
+                color: $white;
+                margin-bottom: 26px;
+            }
+            .address {
+                display: flex;
+                svg {
+                    margin-right: 15px;
+                }
+                h4 {
+                    font-family: "Gilroy";
+                    font-size: 14px;
+                    @include adaptive-value("font-size", 14, 10);
+                    line-height: 16px;
+                    color: #cfcfcf;
+                    margin-bottom: 10px;
+                    @include adaptive-value("margin-bottom", 10, 5);
+                }
+                p {
+                    font-size: 16px;
+                    @include adaptive-value("font-size", 16, 12);
+                    font-weight: 600;
+                    color: $white;
+                    margin-bottom: 20px;
+                    @include adaptive-value("margin-bottom", 20, 10);
+                }
+            }
+        }
+        .bottom {
+            margin-top: 10px;
+            @include adaptive-value("margin-bottom", 10, 5);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            div {
+                h5 {
+                    font-weight: 700;
+                    font-size: 23px;
+                    @include adaptive-value("font-size", 23, 14);
+                    line-height: 28px;
+
+                    color: $white;
+                }
+                span {
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #cfcfcf;
+                }
+            }
+        }
+        .socialNetwork {
+            margin-top: 35px;
+            @include adaptive-value("margin-top", 35, 5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                margin: 0 5px;
+                cursor: pointer;
+            }
+            h5 {
+                display: inline;
+                margin-right: 15px;
+                @include adaptive-value("font-size", 16, 14);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contactWrapper {
+        top: 0;
+        background-position-x: 100%;
+        background-position-y: 20%;
+        .container {
+            align-items: flex-start;
+            justify-content: center;
+            .infoBlock {
+                .contactInfo {
+                    h3 {
+                        text-align: center;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .bottom {
+                margin: 0;
+                flex-direction: column;
+                div {
+                }
+                h5 {
+                    margin-right: 10px;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

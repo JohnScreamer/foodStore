@@ -15,6 +15,8 @@ export interface IGoodsInitState {
     error: null | string;
     allGoods: Array<IAllGods> | null;
     filteredItem: null | IDrinks | ISoup | IAlcohols | IBeer | IHotDish;
+    discountList: Array<IDiscountList> | null;
+    activeDiscount: null | IDiscountList;
     pagination: {
         maxItemInPage: number;
         totalPages: number | null;
@@ -27,4 +29,11 @@ export interface ICartInitState {
     error: null | string;
     amountItemInCart: number;
     totalPrice: number;
+}
+
+export interface IDiscountList {
+    id: number;
+    text: string;
+    title: string;
+    img: string;
 }

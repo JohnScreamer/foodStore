@@ -1,0 +1,48 @@
+@import "./../../scss/SCSSConstants.scss";
+
+.discount {
+    ul {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1920px;
+        padding: 0 15px;
+        li {
+            background: $greyLightGradient;
+            @extend %br10;
+            overflow: hidden;
+            max-width: 440px;
+            width: 100%;
+            margin: 25px 10px;
+            cursor: pointer;
+            img {
+                width: 100%;
+                object-position: center;
+                object-fit: cover;
+                height: 180px;
+            }
+            div {
+                padding: 15px;
+                h2 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $white;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #a6a7ab;
+                }
+            }
+        }
+    }
+}
+.wrapper {
+    padding: 50px 0px 35px 0;
+    @include adaptive-value("padding-top", 50, 15);
+    @include adaptive-value("padding-bottom", 35, 10);
+}

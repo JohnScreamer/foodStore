@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useAppSelector } from "../../Hooks/common";
+import { useAppDispatch, useAppSelector } from "../../Hooks/common";
+import { clearCart } from "../../Redux/Reducers/CartReducer";
 import CasualBtn from "../Buttons/CasualBtn/CasualBtn";
 import s from "./OrderDone.module.scss";
 const OrderDone = () => {
+    const dispatch = useAppDispatch();
     const { cart, totalPrice } = useAppSelector((state) => state.cart);
     const userInfo = useAppSelector((state) => state.UserProfile.lastOrder);
     const itemList = cart.map((goods) => (
@@ -13,6 +15,7 @@ const OrderDone = () => {
     ));
     const navigate = useNavigate();
     const toPage = (page: string) => {
+        dispatch(clearCart());
         navigate(page);
     };
 

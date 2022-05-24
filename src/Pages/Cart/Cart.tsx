@@ -25,7 +25,7 @@ const Cart: FC = () => {
         <>
             <NavBarGoodsCategories />
             {priceError && (
-                <ModalWindow callback={() => setPriceError(false)}>
+                <ModalWindow hasBtnClose callback={() => setPriceError(false)}>
                     <PriceError setModalStatus={setPriceError} />
                 </ModalWindow>
             )}

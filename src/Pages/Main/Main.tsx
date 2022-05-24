@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import Benefits from "../../Components/Benefits/Benefits";
 import GoodsCategories from "../../Components/GoodsCategories/GoodsCategories";
+import GoogleSection from "../../Components/GoogleSection/GoogleSection";
 import Input from "../../Components/Input/Input";
 import LoadingApiRequest from "../../Components/LoadingApiRequest/LoadingApiRequest";
 import ModalWindow from "../../Components/ModalWindow/ModalWindow";
@@ -30,6 +31,7 @@ const Main: FC = () => {
                 <GoodsCategories sectionName="Пиво" goods={beers} />
                 <GoodsCategories sectionName="Алкоголь" goods={alcohols} />
                 <Benefits />
+                <GoogleSection />
             </main>
         </>
     );

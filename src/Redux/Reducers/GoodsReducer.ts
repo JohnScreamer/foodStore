@@ -1,11 +1,15 @@
 import {
     FetchAllGoods,
+    FetchDiscounList,
     FetchFilterGoods,
     FetchOneGoodsType,
     FetchOneItem,
 } from "./../../Api/ApiRequest";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IGoodsInitState } from "../../InterfacesTypes/ReducersInterface";
+import {
+    IDiscountList,
+    IGoodsInitState,
+} from "../../InterfacesTypes/ReducersInterface";
 import {
     IAlcohols,
     IAllGods,
@@ -29,6 +33,8 @@ const initialState: IGoodsInitState = {
     },
     allGoods: null,
     filteredItem: null,
+    discountList: null,
+    activeDiscount: null,
 
     pagination: {
         maxItemInPage: 10,
@@ -41,7 +47,16 @@ const initialState: IGoodsInitState = {
 const GoodsReducer = createSlice({
     name: "goods",
     initialState,
-    reducers: {},
+    reducers: {
+        getDiscountItem: (state, action: PayloadAction<number>) => {
+            const active = state.discountList?.find(
+                (discountItem) => discountItem.id === action.payload
+            );
+            if (active) {
+                state.activeDiscount = active;
+            }
+        },
+    },
     extraReducers(builder) {
         builder
             .addCase(RequestAllGoods.pending, (state) => {
@@ -85,6 +100,13 @@ const GoodsReducer = createSlice({
                 }
                 state.allGoods = filteredGoods;
             })
+            .addCase(RequestDiscountList.fulfilled, (state, action) => {
+                state.discountList = action.payload;
+                state.isLoading = false;
+            })
+            .addCase(RequestDiscountList.pending, (state) => {
+                state.isLoading = true;
+            })
             .addMatcher(isError, (state, action: PayloadAction<string>) => {
                 state.isLoading = false;
 
@@ -98,6 +120,7 @@ const isError = (action: any) => {
 };
 
 export default GoodsReducer.reducer;
+export const { getDiscountItem } = GoodsReducer.actions;
 
 ///////////-----AsyncThunk-----///////////
 
@@ -159,4 +182,17 @@ export const FilterGoods = createAsyncThunk<
     }
 
     return { response: response.data, data: data };
+});
+
+export const RequestDiscountList = createAsyncThunk<
+    Array<IDiscountList>,
+    undefined,
+    { rejectValue: string }
+>("RequestDiscountList/goods", async function (_, { rejectWithValue }) {
+    const response = await FetchDiscounList();
+    if (response.status > 300 || response.status < 199) {
+        return rejectWithValue(`Error , not get discount List`);
+    }
+    const data = response.data;
+    return data;
 });

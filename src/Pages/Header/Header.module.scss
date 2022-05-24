@@ -18,6 +18,7 @@
 }
 .logo {
     margin-right: 72px;
+    @include adaptive-value("margin-right", 72, 10);
     font-weight: 700;
     font-size: 25px;
     line-height: 100%;
@@ -28,6 +29,7 @@
 .inputWrapper {
     display: flex;
     margin-right: 30px;
+    @include adaptive-value("margin-right", 10, 5);
     background: $greySoft;
     @extend %br10;
     padding: 18px 20px;
@@ -48,7 +50,7 @@
         &::placeholder {
             font-size: 18px;
             line-height: 21px;
-            @include adaptive-value("font-size", 18, 14);
+            @include adaptive-value("font-size", 18, 10);
             color: $greyLight;
         }
     }
@@ -70,7 +72,6 @@
 }
 .contactWrapper {
     display: flex;
-    margin-right: auto;
     padding-right: 10px;
 
     p {
@@ -114,5 +115,25 @@
     }
     .logo {
         margin: 0;
+    }
+}
+.toCartWrapper {
+}
+@media (max-width: 768px) {
+    .logIn {
+        display: none;
+    }
+}
+.logIn {
+    margin-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #635c5a;
+    button {
+        background: none;
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 10px;
+        }
     }
 }

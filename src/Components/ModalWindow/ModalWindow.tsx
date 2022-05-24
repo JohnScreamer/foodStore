@@ -1,10 +1,12 @@
+import classNames from "classnames";
 import { FC, useEffect } from "react";
 import s from "./ModalWindow.module.scss";
 interface ModalWindow {
     children: React.ReactNode;
     callback: (status: boolean) => void;
+    hasBtnClose?: boolean;
 }
-const ModalWindow: FC<ModalWindow> = ({ children, callback }) => {
+const ModalWindow: FC<ModalWindow> = ({ children, callback, hasBtnClose }) => {
     const closeWindow = () => {
         callback(false);
     };
@@ -18,10 +20,12 @@ const ModalWindow: FC<ModalWindow> = ({ children, callback }) => {
     return (
         <div className={s.wrapper}>
             <div className={s.window}>
-                <button onClick={closeWindow}>
-                    <span className={s.btnOne}></span>
-                    <span className={s.btnTwo}></span>
-                </button>
+                {hasBtnClose && (
+                    <button onClick={closeWindow}>
+                        <span className={classNames(s.btnOne)}></span>
+                        <span className={classNames(s.btnTwo)}></span>
+                    </button>
+                )}
                 {children}
             </div>
         </div>

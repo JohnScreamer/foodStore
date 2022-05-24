@@ -5,6 +5,7 @@ import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
 import GoodsCard from "../../Components/GoodsCard/GoodsCard";
 import LoadingCardList from "../../Components/LoadingCadList/LoadingCadList";
 import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
+import SectionName from "../../Components/SectionName/SectionName";
 import DropList from "../../Components/Select/Select";
 import { useAppDispatch, useAppSelector } from "../../Hooks/common";
 import {

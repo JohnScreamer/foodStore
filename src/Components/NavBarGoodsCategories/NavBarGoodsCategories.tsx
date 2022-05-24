@@ -8,7 +8,20 @@ const NavBarGoodsCategories = () => {
     return (
         <nav className={s.navWrapper}>
             <ul className={classNames(s.navList, "navBarInner")}>
-                <Swiper centeredSlides initialSlide={3} slidesPerView={"auto"}>
+                <Swiper
+                    centeredSlides
+                    initialSlide={3}
+                    spaceBetween={20}
+                    slidesPerView={"auto"}
+                    breakpoints={{
+                        1050: {
+                            width: 1050,
+                            slidesPerView: "auto",
+                            noSwiping: true,
+                            noSwipingClass: "swiper-slide",
+                        },
+                    }}
+                >
                     <SwiperSlide>
                         <li>
                             <NavLink to={"/"}>Головна</NavLink>
@@ -56,6 +69,11 @@ const NavBarGoodsCategories = () => {
                     <SwiperSlide>
                         <li>
                             <NavLink to={"/categories/soups"}>Супи</NavLink>
+                        </li>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <li>
+                            <NavLink to={"/discount"}>Акції</NavLink>
                         </li>
                     </SwiperSlide>
                 </Swiper>

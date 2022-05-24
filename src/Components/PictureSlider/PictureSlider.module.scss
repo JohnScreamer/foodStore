@@ -19,3 +19,25 @@
     100% {
     }
 }
+.loadingBlock {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    @include adaptive-value("height", 484, 200);
+    background: linear-gradient(90deg, rgb(49, 48, 47) 0%, rgb(62, 61, 60) 50%, rgb(98, 94, 93) 100%);
+
+    animation: myAnimBlock 1s ease 0s infinite normal forwards;
+}
+
+@keyframes myAnimBlock {
+    0% {
+        background-position: left center;
+        background-size: 100%;
+    }
+
+    100% {
+        background-position: left center;
+        background-size: 150%;
+    }
+}

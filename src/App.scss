@@ -123,11 +123,16 @@ input {
     @include adaptive-value("width", 325, 250);
 }
 .navBarInner .swiper-slide {
+    width: auto;
+}
+.navBarInner .swiper {
+    display: flex;
+    justify-content: center;
 }
 .navBarInner .swiper-wrapper {
-    text-align: center;
-    max-width: 150px;
     overflow: visible;
+    a {
+    }
 }
 .swiper-slide li .active {
     border-bottom: solid 3px $greenDeep;

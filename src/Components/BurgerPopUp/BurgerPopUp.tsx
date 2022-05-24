@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import s from "./BurgerPopUp.module.scss";
 interface IBurgerPopUp {
     setPopUpStatus: (status: boolean) => void;
+    setLoginStatus: (status: boolean) => void;
     showPopUpBurger: boolean;
     burgerRef: any;
 }
@@ -10,6 +11,7 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
     setPopUpStatus,
     showPopUpBurger,
     burgerRef,
+    setLoginStatus,
 }) => {
     const navigate = useNavigate();
     const GoTo = (url: string) => {
@@ -75,7 +77,10 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
                     </button>
                 </li>
                 <li>
-                    <button>Акції</button>
+                    <button onClick={() => GoTo("/discount")}>Акції</button>
+                </li>
+                <li>
+                    <button onClick={() => setLoginStatus(true)}>Вхід</button>
                 </li>
             </ul>
         </div>

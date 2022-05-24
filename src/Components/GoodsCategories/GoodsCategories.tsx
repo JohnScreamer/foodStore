@@ -13,6 +13,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import classNames from "classnames";
 import SectionName from "../SectionName/SectionName";
+import { useAppSelector } from "../../Hooks/common";
+import LoadingIOneCard from "../LoadingCadList/LoadingOnecard";
 
 // Import css files
 
@@ -24,16 +26,34 @@ interface IGoodsCategories {
 }
 
 const GoodsCategories: FC<IGoodsCategories> = ({ sectionName, goods }) => {
+    const loadingCard = Array(10).fill(null);
     const goodsCardList = goods?.map((goodsItem) => (
         <SwiperSlide key={goodsItem.name}>
             <GoodsCard goods={goodsItem} />
         </SwiperSlide>
     ));
-
+    const isLoading = useAppSelector((state) => state.goods.isLoading);
+    const loadingCardList = loadingCard.map((card, index) => {
+        return (
+            <SwiperSlide key={index}>
+                <LoadingIOneCard key={index} />{" "}
+            </SwiperSlide>
+        );
+    });
     return (
         <section className={classNames(s.wrapper, "categoriesWrapper")}>
             <SectionName>{sectionName}</SectionName>
-            {goods ? (
+            {isLoading ? (
+                <ul>
+                    <Swiper
+                        centeredSlides
+                        initialSlide={3}
+                        slidesPerView={"auto"}
+                    >
+                        {loadingCardList}
+                    </Swiper>
+                </ul>
+            ) : goods ? (
                 <ul>
                     <Swiper
                         centeredSlides

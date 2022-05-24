@@ -13,6 +13,7 @@
     background: rgba(0, 0, 0, 0.34);
 
     .window {
+        animation: myAnim 0.6s ease 0s 1 normal forwards;
         display: inline-block;
         @extend %br10;
         background: $greyLightGradient;
@@ -20,6 +21,11 @@
         padding: 20px;
         margin: 15px;
         background-color: sandybrown;
+        text-align: center;
+        .notVisible {
+            display: none;
+        }
+
         .btnOne {
             display: inline-block;
             position: absolute;
@@ -42,5 +48,15 @@
             right: 15px;
             transform: rotate(135deg);
         }
+    }
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

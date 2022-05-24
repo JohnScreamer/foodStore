@@ -1557,79 +1557,54 @@
       }
     ]
   },
-  "profile": {
-    "name": "typicode"
-  },
-  "orders": [
+  "profile": [
     {
-      "name": "123",
-      "phone": "123",
-      "street": "123",
-      "houseNumber": "123",
-      "flatNum": "",
-      "porch": "",
-      "floor": "",
-      "comment": "",
-      "callBack": false,
-      "person": "",
-      "agreement": true,
-      "id": 1
+      "name": "ivan",
+      "password": "pass",
+      "id": 1653405338301,
+      "isAdmin": false,
+      "userOrderHistory": []
     },
     {
-      "name": "123",
-      "phone": "123",
-      "street": "123",
-      "houseNumber": "123",
-      "flatNum": "",
-      "porch": "",
-      "floor": "",
-      "comment": "",
-      "callBack": false,
-      "person": "",
-      "agreement": true,
-      "id": 2
+      "name": "danny",
+      "password": "zxcbbdfb",
+      "id": 1653405502668,
+      "isAdmin": false,
+      "userOrderHistory": []
     },
     {
-      "name": "123",
-      "phone": "123",
-      "street": "123",
-      "houseNumber": "121",
-      "flatNum": "121",
-      "porch": "",
-      "floor": "",
-      "comment": "",
-      "callBack": true,
-      "person": "2",
-      "agreement": true,
-      "id": 3
+      "name": "admin",
+      "password": "admin",
+      "id": 16534502668,
+      "isAdmin": true,
+      "userOrderHistory": []
+    }
+  ],
+  "orders": [],
+  "DiscountArr": [
+    {
+      "id": 1,
+      "title": "Доставка за 30 хв!",
+      "text": "Взгляни вокруг, оглянись назад. Духи с тобой связаться хотят. Мир не таков, каким кажется он,Чудесами каждый окружён.",
+      "img": "https://i.ibb.co/2khLVSX/13-22.webp"
     },
     {
-      "name": "324",
-      "phone": "231",
-      "street": "234",
-      "houseNumber": "234",
-      "flatNum": "231",
-      "porch": "234",
-      "floor": "234",
-      "comment": "234234234234",
-      "callBack": true,
-      "person": "-123",
-      "agreement": true,
-      "id": 4
+      "id": 2,
+      "title": "Акція дешевше на 20%",
+      "text": "Взгляни вокруг, оглянись назад. Духи с тобой связаться хотят. Мир не таков, каким кажется он,Чудесами каждый окружён.",
+      "img": "https://i.ibb.co/q9q5KT3/banner.webp"
     },
     {
-      "name": "asd",
-      "phone": "234",
-      "street": "234",
-      "houseNumber": "234",
-      "flatNum": "234",
-      "porch": "234",
-      "floor": "234",
-      "comment": "234",
-      "callBack": true,
-      "person": "3",
-      "agreement": true,
-      "id": 5
+      "id": 3,
+      "title": "Онлайн оплата скидка 10%!",
+      "text": "Взгляни вокруг, оглянись назад. Духи с тобой связаться хотят. Мир не таков, каким кажется он,Чудесами каждый окружён.",
+      "img": "https://i.ibb.co/qnKNB1D/7-25.webp"
+    },
+    {
+      "id": 4,
+      "title": "Вода  скидка 20%!",
+      "text": "Взгляни вокруг, оглянись назад. Духи с тобой связаться хотят. Мир не таков, каким кажется он,Чудесами каждый окружён.",
+      "img": "https://i.ibb.co/jRjDSp6/10-22.webp"
     }
   ]
 }
