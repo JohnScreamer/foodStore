@@ -7,7 +7,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { ISelect } from "../../InterfacesTypes/GoodsInterface";
-import { border } from "@mui/system";
 
 interface DropListType {
     options: Array<ISelect>;
@@ -64,6 +63,7 @@ const DropList: FC<DropListType> = ({
                                     sx={{
                                         color: "white",
                                         borderRadius: 3,
+                                        fontSize: 20,
                                         padding: 1.5,
                                         border: "2px solid rgba(255, 255, 255, 0.1)",
                                     }}

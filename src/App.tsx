@@ -21,6 +21,7 @@ import DiscountOneItem from "./Pages/Discount/DiscountOneItem/DiscountOneItem";
 import LogIn from "./Pages/LogIn/LogIn";
 import SigIn from "./Components/SigIn/SigIn";
 import Page404 from "./Pages/Page404/Page404";
+import AdminPage from "./Pages/AdminPage/AdminPage";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -81,6 +82,11 @@ function App() {
                 <Route path="/discount" element={<Discount />} />
 
                 <Route path="/goods/:id" element={<CardPage />} />
+                <Route
+                    path="/admin"
+                    element={<AdminPage setLoginStatus={setLoginStatus} />}
+                />
+
                 <Route
                     path="/discount/:id"
                     element={<DiscountOneItem discountList={discountList} />}

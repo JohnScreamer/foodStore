@@ -36,7 +36,7 @@ const OrderForm: FC = () => {
         register,
         formState: { errors },
     } = useForm();
-    const totalPrice = useAppSelector((state) => state.cart.totalPrice);
+    const { totalPrice, cart } = useAppSelector((state) => state.cart);
     const { isLoading, error } = useAppSelector((state) => state.UserProfile);
     const dispatch = useAppDispatch();
     const [showModalDone, setShowModalDone] = useState(false);
@@ -45,9 +45,9 @@ const OrderForm: FC = () => {
         console.log(data);
 
         if (totalPrice > 299) {
-            console.log("byu");
-
-            dispatch(addOrder(data));
+            dispatch(
+                addOrder({ ...data, id: new Date().getTime(), orderList: cart })
+            );
             setShowModalDone(true);
         } else {
             setPriceError(true);
@@ -104,7 +104,7 @@ const OrderForm: FC = () => {
                 </form>
             </main>
             {showModalDone && (
-                <ModalWindow callback={setShowModalDone}>
+                <ModalWindow confetti callback={setShowModalDone}>
                     <OrderDone />
                 </ModalWindow>
             )}

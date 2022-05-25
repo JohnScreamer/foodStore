@@ -26,7 +26,7 @@ export interface IUserInitState {
     error: null | string;
     lastOrder: IFormOrder | null;
     profile?: IProfile;
-    adminInfo: null | IAdminInfo;
+    adminInfo: IAdminInfo;
 }
 
 const initialState: IUserInitState = {
@@ -34,7 +34,10 @@ const initialState: IUserInitState = {
     isLoading: false,
     error: null,
     lastOrder: null,
-    adminInfo: null,
+    adminInfo: {
+        orderHistory: [],
+        allUsers: [],
+    },
 };
 
 const UserProfileReducer = createSlice({
@@ -97,9 +100,8 @@ const UserProfileReducer = createSlice({
                 state.isLoading = false;
             })
             .addCase(GetAllOrders.fulfilled, (state, action) => {
-                if (state.adminInfo) {
-                    state.adminInfo.orderHistory = action.payload;
-                }
+                state.adminInfo.orderHistory = action.payload.reverse();
+
                 state.isLoading = false;
             })
             .addCase(GetAllOrders.pending, (state) => {

@@ -1,3 +1,12 @@
+import {
+    IDrinks,
+    ISoup,
+    IAlcohols,
+    IBeer,
+    IHotDish,
+    ISnack,
+} from "./GoodsInterface";
+
 export interface IFormOrder {
     name: string;
     phone: number;
@@ -11,6 +20,8 @@ export interface IFormOrder {
     porchNumber?: number;
     restaurant?: "malibu" | "legend" | "friday" | "caribu";
     agreement: true;
+    id: number;
+    orderList: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
 }
 
 export interface IActiveFields {

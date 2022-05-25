@@ -26,7 +26,7 @@ const Page404 = () => {
                     </div>
                     <div className="number">4</div>
                 </div>
-
+                <div className="messageError">404</div>
                 <div className="text">
                     Ой ой здажться немає такої сторінки ще((((
                 </div>

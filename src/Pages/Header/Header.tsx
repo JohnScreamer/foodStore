@@ -24,6 +24,9 @@ const Header: FC<IHeader> = ({
     const data = useParams();
     const burgerRef = useRef(null);
     const name = useAppSelector((state) => state.UserProfile.profile?.name);
+    const isAdmin = useAppSelector(
+        (state) => state.UserProfile.profile?.isAdmin
+    );
     const show = (e: any) => {
         if (e.target !== searchRef.current) {
             inputRef.current.focus();
@@ -140,7 +143,14 @@ const Header: FC<IHeader> = ({
                     </div>
                     <div className={s.logIn}>
                         {name ? (
-                            <NavLink to={"/"}>{name}</NavLink>
+                            <div className={s.nameWrapper}>
+                                <NavLink to={"/"}>{name}</NavLink>
+                                {isAdmin && (
+                                    <NavLink to={"/admin"}>
+                                        <b>dashboard</b>
+                                    </NavLink>
+                                )}
+                            </div>
                         ) : (
                             <button onClick={() => setLoginStatus(true)}>
                                 <svg

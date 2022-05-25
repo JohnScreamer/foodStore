@@ -1,5 +1,6 @@
 import { FC, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../Hooks/common";
 import s from "./BurgerPopUp.module.scss";
 interface IBurgerPopUp {
     setPopUpStatus: (status: boolean) => void;
@@ -18,6 +19,7 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
         navigate(`${url}`);
         setPopUpStatus(false);
     };
+    const isAuth = useAppSelector((state) => state.UserProfile.profile?.name);
     const popUpBurgerRef = useRef(null);
     const closePopUpBurger = (e: any) => {
         if (
@@ -79,9 +81,15 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
                 <li>
                     <button onClick={() => GoTo("/discount")}>Акції</button>
                 </li>
-                <li>
-                    <button onClick={() => setLoginStatus(true)}>Вхід</button>
-                </li>
+                {isAuth ? (
+                    <b> user {isAuth}</b>
+                ) : (
+                    <li>
+                        <button onClick={() => setLoginStatus(true)}>
+                            Вхід
+                        </button>
+                    </li>
+                )}
             </ul>
         </div>
     );

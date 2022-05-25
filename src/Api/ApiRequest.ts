@@ -43,7 +43,7 @@ export const FetchLogIn = (logInData: ILogInData) => {
 };
 ////admin///
 export const FetchGetAllOrders = () => {
-    return BaseRequest.get("/orders");
+    return BaseRequest.get("/orders?_sort=id");
 };
 export const FetchGetAllProfiles = () => {
     return BaseRequest.get("/Profile");

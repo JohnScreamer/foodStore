@@ -137,3 +137,10 @@
         }
     }
 }
+.nameWrapper {
+    display: flex;
+    flex-direction: column;
+    b {
+        color: $greenSoft;
+    }
+}

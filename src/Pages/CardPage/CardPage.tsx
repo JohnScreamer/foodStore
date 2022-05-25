@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import RemoveAddBtn from "../../Components/Buttons/RemoveAddBtn/RemoveAddBtn";
 import LoadingCard from "../../Components/LoadingCard/LoadingCard";
@@ -19,7 +19,7 @@ import {
 import { RequestOneGoodsItem } from "../../Redux/Reducers/GoodsReducer";
 import s from "./CardPage.module.scss";
 
-const CardPage = () => {
+const CardPage: FC = () => {
     const dispatch = useAppDispatch();
     const data = useParams();
 

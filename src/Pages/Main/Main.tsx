@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import Benefits from "../../Components/Benefits/Benefits";
+import CommonError from "../../Components/CommonError/CommonError";
 import GoodsCategories from "../../Components/GoodsCategories/GoodsCategories";
 import GoogleSection from "../../Components/GoogleSection/GoogleSection";
 import Input from "../../Components/Input/Input";
@@ -20,11 +21,22 @@ const Main: FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const [showError, setErrorStatus]: any = useState(error);
 
     return (
         <>
             <main className={s.main}>
                 {isLoading && <LoadingApiRequest />}
+                {showError && error && (
+                    <ModalWindow
+                        callback={() => {
+                            setErrorStatus(false);
+                        }}
+                        hasBtnClose
+                    >
+                        <CommonError text={error} />
+                    </ModalWindow>
+                )}
                 <PictureSlider />
                 <NavBarGoodsCategories />
                 <GoodsCategories sectionName="Гарячі страви" goods={hotDish} />

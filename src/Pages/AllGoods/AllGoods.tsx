@@ -20,7 +20,6 @@ const AllGoods: FC = () => {
         (state) => state.goods
     );
     const dispatch = useAppDispatch();
-    const [filterParam, setFilterParam] = useState(null);
 
     const { control, handleSubmit } = useForm();
     const goodsList = allGoods?.map((goodsItem) => (

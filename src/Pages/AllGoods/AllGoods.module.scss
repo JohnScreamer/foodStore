@@ -56,6 +56,9 @@
 }
 .inputWrapper {
     max-width: 300px;
+    label {
+        font-size: 16px;
+    }
 }
 .Filter {
     form {
@@ -78,4 +81,9 @@
             }
         }
     }
+}
+.MuiPaper-root,
+.MuiList-root,
+.MuiMenuItem-root {
+    font-size: 2rem;
 }

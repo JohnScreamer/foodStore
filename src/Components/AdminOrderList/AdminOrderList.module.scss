@@ -1,0 +1,39 @@
+@import "./../../scss/SCSSConstants.scss";
+.AdminOrderList {
+    border-bottom: 2px solid $greyLight;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.userInfo {
+    max-width: 400px;
+    h4 {
+        font-size: 20px;
+        padding: 5px;
+    }
+    span {
+        display: block;
+        b {
+            color: $greenSoft;
+        }
+    }
+}
+
+.goodsOrder {
+    h4 {
+        font-size: 19px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid $greenSoft;
+        margin-bottom: 15px;
+    }
+    span {
+        b {
+            color: $greenSoft;
+        }
+    }
+}
+.goodsWrapper {
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+}

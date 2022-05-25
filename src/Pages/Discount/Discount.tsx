@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import GoogleSection from "../../Components/GoogleSection/GoogleSection";
 import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
@@ -7,7 +7,7 @@ import { useAppSelector } from "../../Hooks/common";
 
 import s from "./Discount.module.scss";
 
-const Discount = () => {
+const Discount: FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
