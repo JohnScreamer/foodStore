@@ -1,14 +1,9 @@
-import classNames from "classnames";
 import { FC, useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
-import Input from "../../Components/Input/Input";
-import DropList from "../../Components/Select/Select";
 import {
     activeFiled,
     IActiveFields,
     IFormOrder,
-    restaurants,
 } from "../../InterfacesTypes/FormOrderTypes";
 import Agreement from "./Agreement/Agreement";
 import ContactInfo from "./ContactInfo/ContactInfo";
@@ -21,7 +16,7 @@ import { addOrder } from "../../Redux/Reducers/UserProfile";
 import ModalWindow from "../../Components/ModalWindow/ModalWindow";
 import OrderDone from "../../Components/OrderDone/OrderDone";
 import SectionName from "../../Components/SectionName/SectionName";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PriceError from "../../Components/PriceError/PriceError";
 import LoadingApiRequest from "../../Components/LoadingApiRequest/LoadingApiRequest";
 const OrderForm: FC = () => {
@@ -35,15 +30,13 @@ const OrderForm: FC = () => {
         handleSubmit,
         register,
         formState: { errors },
-    } = useForm();
+    } = useForm<IFormOrder>();
     const { totalPrice, cart } = useAppSelector((state) => state.cart);
     const { isLoading, error } = useAppSelector((state) => state.UserProfile);
     const dispatch = useAppDispatch();
     const [showModalDone, setShowModalDone] = useState(false);
 
-    const onSubmit: SubmitHandler<any> = (data) => {
-        console.log(data);
-
+    const onSubmit: SubmitHandler<IFormOrder> = (data) => {
         if (totalPrice > 299) {
             dispatch(
                 addOrder({ ...data, id: new Date().getTime(), orderList: cart })
@@ -53,7 +46,6 @@ const OrderForm: FC = () => {
             setPriceError(true);
         }
     };
-    const navigate = useNavigate();
     const [priceError, setPriceError] = useState(false);
 
     return (
@@ -61,13 +53,12 @@ const OrderForm: FC = () => {
             <main className={s.wrapper}>
                 {isLoading && <LoadingApiRequest />}
                 <div className={s.topWrapper}>
-                    <button
-                        className={s.backBtn}
-                        onClick={() => navigate("/cart")}
-                    >
-                        {" "}
-                        <span></span>До корзини
-                    </button>{" "}
+                    <NavLink to={"/cart"}>
+                        <button className={s.backBtn}>
+                            {" "}
+                            <span></span>До корзини
+                        </button>{" "}
+                    </NavLink>
                     <SectionName>Оформлення замовлення</SectionName>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>

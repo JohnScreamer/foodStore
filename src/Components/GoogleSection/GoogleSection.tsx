@@ -1,6 +1,7 @@
+import { FC } from "react";
 import CasualBtn from "../Buttons/CasualBtn/CasualBtn";
 import s from "./GoogleSection.module.scss";
-const GoogleSection = () => {
+const GoogleSection: FC = () => {
     return (
         <div className={s.contactWrapper}>
             <div className={s.container}>

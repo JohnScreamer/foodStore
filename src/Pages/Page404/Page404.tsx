@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
 import "./Page404.scss";
 
-const Page404 = () => {
+const Page404: FC = () => {
     return (
         <main className="background404">
             <div className="center">

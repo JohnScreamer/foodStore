@@ -11,22 +11,47 @@ const ContactInfo: FC<any> = ({ errors, register }) => {
 
                 <div className={s.contactInfo}>
                     <div className={classNames(s.name, s.relative)}>
-                        {errors.name && <h6>Коректне ім'я.</h6>}
+                        {errors?.name?.message && (
+                            <h6>{errors.name.message}</h6>
+                        )}
                         <Input
                             control={{
-                                ...register("name", { required: true }),
+                                ...register("name", {
+                                    required: true,
+
+                                    minLength: {
+                                        value: 3,
+                                        message: "мінімум 3 символа",
+                                    },
+                                    maxLength: {
+                                        value: 12,
+                                        message: "максимум 12 символів",
+                                    },
+                                }),
                             }}
                             error={errors.name}
                             placeholder="Імя"
                         />
                     </div>
                     <div className={classNames(s.phone, s.relative)}>
-                        {errors.phone && <h6>Валідний номер</h6>}
+                        {errors?.phone?.message && (
+                            <h6>{errors.phone.message}</h6>
+                        )}
                         <Input
                             number
                             error={errors.phone}
                             control={{
-                                ...register("phone", { required: true }),
+                                ...register("phone", {
+                                    required: true,
+                                    minLength: {
+                                        value: 7,
+                                        message: "мінімум 7 символа",
+                                    },
+                                    maxLength: {
+                                        value: 9,
+                                        message: "максимум 9 символів",
+                                    },
+                                }),
                             }}
                             placeholder="Телефон"
                         />

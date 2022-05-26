@@ -8,6 +8,10 @@ interface LogIn {
     setSigIn: (status: boolean) => void;
     setLoginStatus: (status: boolean) => void;
 }
+interface ILogInSubmit {
+    name: string;
+    password: string;
+}
 
 const LogIn: FC<LogIn> = ({ setSigIn, setLoginStatus }) => {
     const dispatch = useAppDispatch();
@@ -16,8 +20,8 @@ const LogIn: FC<LogIn> = ({ setSigIn, setLoginStatus }) => {
         register,
         formState: { errors },
         reset,
-    } = useForm();
-    const onSubmit: SubmitHandler<any> = (data) => {
+    } = useForm<ILogInSubmit>();
+    const onSubmit: SubmitHandler<ILogInSubmit> = (data) => {
         dispatch(logIn(data));
         setLoginStatus(false);
         reset();

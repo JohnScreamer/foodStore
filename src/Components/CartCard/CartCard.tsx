@@ -28,7 +28,7 @@ const CartCard: FC<ICartCard> = ({ goods }) => {
     return (
         <li className={s.cardWrapper}>
             <NavLink className={s.imgLink} to={`/goods/${goods.id}`}>
-                <img src={goods.img} alt="goods ing" />
+                <img src={goods.img} alt="goods img" />
             </NavLink>
 
             <div className={s.textWrapper}>

@@ -115,7 +115,7 @@ const GoodsReducer = createSlice({
     },
 });
 
-const isError = (action: any) => {
+const isError = (action: PayloadAction<string>) => {
     return action.type.endsWith("rejected");
 };
 

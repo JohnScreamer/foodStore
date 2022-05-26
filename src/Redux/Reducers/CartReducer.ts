@@ -1,6 +1,14 @@
 import { FetchAddOrder } from "./../../Api/ApiRequest";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ICartInitState } from "../../InterfacesTypes/ReducersInterface";
+import {
+    IAlcohols,
+    IBeer,
+    IDrinks,
+    IHotDish,
+    ISnack,
+    ISoup,
+} from "../../InterfacesTypes/GoodsInterface";
 
 const initialState: ICartInitState = {
     cart: [],
@@ -14,7 +22,12 @@ const CartReducer = createSlice({
     name: "cart",
     initialState,
     reducers: {
-        addToCart(state, action: PayloadAction<any>) {
+        addToCart(
+            state,
+            action: PayloadAction<
+                IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack
+            >
+        ) {
             const hasInCart = state.cart.find((goods) => {
                 if (goods.id === action.payload.id && goods.amount) {
                     goods.amount = goods.amount + 1;
@@ -29,7 +42,7 @@ const CartReducer = createSlice({
             state.amountItemInCart = state.amountItemInCart + 1;
             state.totalPrice = state.totalPrice + action.payload.price;
         },
-        removeItemFromCart(state, action) {
+        removeItemFromCart(state, action: PayloadAction<number>) {
             state.cart = state.cart.filter((goods) => {
                 if (goods.id === action.payload && goods.amount) {
                     state.totalPrice = state.totalPrice - goods.price;

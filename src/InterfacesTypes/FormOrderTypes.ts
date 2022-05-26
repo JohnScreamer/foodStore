@@ -19,7 +19,7 @@ export interface IFormOrder {
     comment?: string;
     porchNumber?: number;
     restaurant?: "malibu" | "legend" | "friday" | "caribu";
-    agreement: true;
+    agreement: boolean;
     id: number;
     orderList: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
 }

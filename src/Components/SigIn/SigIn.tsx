@@ -7,6 +7,10 @@ import s from "./SigIn.module.scss";
 interface ISigIn {
     setSigIn: (status: boolean) => void;
 }
+interface ISiInForm {
+    name: string;
+    password: string;
+}
 const SigIn: FC<ISigIn> = ({ setSigIn }) => {
     const dispatch = useAppDispatch();
     const {
@@ -14,8 +18,8 @@ const SigIn: FC<ISigIn> = ({ setSigIn }) => {
         register,
         formState: { errors },
         reset,
-    } = useForm();
-    const onSubmit: SubmitHandler<any> = (data) => {
+    } = useForm<ISiInForm>();
+    const onSubmit: SubmitHandler<ISiInForm> = (data) => {
         const profile = {
             ...data,
             id: new Date().getTime(),

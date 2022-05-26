@@ -4,7 +4,7 @@ import {
     FetchLogIn,
     FetchSigIn,
 } from "./../../Api/ApiRequest";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { FetchAddOrder } from "../../Api/ApiRequest";
 import { IFormOrder } from "../../InterfacesTypes/FormOrderTypes";
 
@@ -54,11 +54,6 @@ const UserProfileReducer = createSlice({
             .addCase(addOrder.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(addOrder.rejected, (state, action) => {
-                if (action.error.message) {
-                    state.error = action.error.message;
-                }
-            })
             .addCase(logIn.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.profile = action.payload;
@@ -66,23 +61,12 @@ const UserProfileReducer = createSlice({
             .addCase(logIn.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(logIn.rejected, (state, action) => {
-                if (action.error.message) {
-                    state.error = action.error.message;
-                }
-            })
             .addCase(sigIn.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.profile = action.payload;
             })
             .addCase(sigIn.pending, (state) => {
                 state.isLoading = true;
-            })
-            .addCase(sigIn.rejected, (state, action) => {
-                if (action.error.message) {
-                    state.error = action.error.message;
-                }
-                state.isLoading = false;
             })
             .addCase(GetAllUsers.fulfilled, (state, action) => {
                 if (state.adminInfo) {
@@ -93,12 +77,6 @@ const UserProfileReducer = createSlice({
             .addCase(GetAllUsers.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(GetAllUsers.rejected, (state, action) => {
-                if (action.error.message) {
-                    state.error = action.error.message;
-                }
-                state.isLoading = false;
-            })
             .addCase(GetAllOrders.fulfilled, (state, action) => {
                 state.adminInfo.orderHistory = action.payload.reverse();
 
@@ -107,7 +85,7 @@ const UserProfileReducer = createSlice({
             .addCase(GetAllOrders.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(GetAllOrders.rejected, (state, action) => {
+            .addMatcher(isError, (state, action) => {
                 if (action.error.message) {
                     state.error = action.error.message;
                 }
@@ -115,6 +93,9 @@ const UserProfileReducer = createSlice({
             });
     },
 });
+const isError = (action: PayloadAction<any>) => {
+    return action.type.endsWith("rejected");
+};
 
 export default UserProfileReducer.reducer;
 
@@ -126,7 +107,6 @@ export const addOrder = createAsyncThunk<any, any, { rejectValue: string }>(
         if (response.status > 300 || response.status < 199) {
             return rejectWithValue(`Error , not made order(`);
         }
-        console.log(response);
 
         return data;
     }

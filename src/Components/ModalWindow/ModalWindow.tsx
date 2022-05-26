@@ -27,7 +27,11 @@ const ModalWindow: FC<ModalWindow> = ({
     return (
         <>
             <div className={s.wrapper}>
-                {confetti && <div className={s.confettiWrapper}><Confetti /></div>}
+                {confetti && (
+                    <div className={s.confettiWrapper}>
+                        <Confetti />
+                    </div>
+                )}
                 <div className={s.window}>
                     {hasBtnClose && (
                         <button onClick={closeWindow}>
