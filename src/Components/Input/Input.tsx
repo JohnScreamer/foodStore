@@ -34,10 +34,10 @@ const Input: FC<IInput> = ({
         return (
             <input
                 id={id}
-                type={number ? "number" : "text"}
-                {...register}
                 onChange={(e) => onChange(e.currentTarget.value)}
                 value={startValue}
+                type={number ? "number" : "text"}
+                {...register}
                 placeholder={placeholder}
                 className={classNames(s.input, {
                     [s.w100]: w100,

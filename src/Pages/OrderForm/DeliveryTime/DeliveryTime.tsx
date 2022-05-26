@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, useRef, useState } from "react";
+import { FC } from "react";
 import CasualBtn from "../../../Components/Buttons/CasualBtn/CasualBtn";
 import Input from "../../../Components/Input/Input";
 import s from "./../OrderForm.module.scss";
@@ -19,18 +19,6 @@ const DeliveryTime: FC<any> = ({
             return state;
         });
     };
-    const [personCount, setPersonCount] = useState(1);
-    const handlerCountPerson = (type: "plus" | "minus") => {
-        if (type === "minus" && personCount > 1) {
-            setPersonCount((prevState: number) => prevState - 1);
-        }
-        if (type === "plus" && personCount < 20) {
-            console.log("les");
-
-            setPersonCount((prevState: number) => (prevState = prevState + 1));
-        }
-    };
-
     return (
         <>
             <div className={classNames(s.section, s.deliveryTimeWrapper)}>
@@ -70,25 +58,14 @@ const DeliveryTime: FC<any> = ({
                     <label className={s.h3Wrapper} htmlFor="callBack">
                         <h3 id={s.callBackH3}>Перезвонити вам?</h3>
                     </label>
-                    <div className={s.personWrapper}>
-                        <label htmlFor="persons">Кількість персон</label>
-                        <span onClick={() => handlerCountPerson("minus")}>
-                            -
-                        </span>
-
+                    <div>
                         <Input
-                            id={"persons"}
                             number
-                            startValue={personCount}
-                            onChange={setPersonCount}
                             control={{
                                 ...register("person"),
                             }}
                             placeholder="Кількість персон"
                         ></Input>
-                        <span onClick={() => handlerCountPerson("plus")}>
-                            +
-                        </span>
                     </div>
                 </div>
             </div>
