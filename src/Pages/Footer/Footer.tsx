@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 import s from "./Footer.module.scss";
 interface IFotter {
     headerRef: any;
@@ -15,7 +16,9 @@ const Footer: FC<IFotter> = ({ headerRef }) => {
                     <span className={s.right}></span>
                 </button>
                 <div className={s.footerInfoWrapper}>
-                    <div>LOGOS</div>
+                    <NavLink to={"/"}>
+                        <div>LOGOS</div>
+                    </NavLink>
                     <span>
                         © ККК ЙО «Сабаки я Наруто Узумаки» <hr /> Всі права
                         захищенні. 2010-2022
@@ -28,7 +31,7 @@ const Footer: FC<IFotter> = ({ headerRef }) => {
                     <a href="#">Про ресторан</a>
                     <a href="">Умови доставки</a>
                     <a href="#">Повернення товара</a>
-                    <a href="">Акції</a>
+                    <NavLink to={"/discount"}>Акції</NavLink>
                 </div>
             </div>
         </footer>

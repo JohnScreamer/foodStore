@@ -47,20 +47,30 @@ const DeliveryType: FC<any> = ({
                         <h3>Адрес доставки</h3>
                         <div className={s.delivery}>
                             <div className={classNames(s.street, s.relative)}>
-                                {errors.street && <h6>Обовязкове поле.</h6>}
+                                {errors?.street?.message && (
+                                    <h6>{errors.street.message}</h6>
+                                )}
                                 <Input
                                     error={errors.street}
                                     control={{
                                         ...register("street", {
                                             required: true,
+                                            minLength: {
+                                                value: 4,
+                                                message: "мінімум 4 символа",
+                                            },
+                                            maxLength: {
+                                                value: 16,
+                                                message: "максимум 16 символів",
+                                            },
                                         }),
                                     }}
                                     placeholder="Вкажіть вулицю"
                                 />
                             </div>
                             <div className={classNames(s.houseNum, s.relative)}>
-                                {errors.houseNumber && (
-                                    <h6>Обовязкове поле.</h6>
+                                {errors?.houseNumber?.message && (
+                                    <h6>{errors.houseNumber.message}</h6>
                                 )}
                                 <Input
                                     number
@@ -68,13 +78,23 @@ const DeliveryType: FC<any> = ({
                                     control={{
                                         ...register("houseNumber", {
                                             required: true,
+                                            minLength: {
+                                                value: 1,
+                                                message: "мінімум 1 символа",
+                                            },
+                                            maxLength: {
+                                                value: 5,
+                                                message: "максимум 5 символів",
+                                            },
                                         }),
                                     }}
                                     placeholder="Номер будика"
                                 />
                             </div>
                             <div className={classNames(s.flatNum, s.relative)}>
-                                {errors.flatNum && <h6>Обовязкове поле.</h6>}
+                                {errors?.flatNum?.message && (
+                                    <h6>{errors.flatNum.message}</h6>
+                                )}
                                 <Input
                                     number
                                     error={errors.flatNum}
@@ -82,6 +102,14 @@ const DeliveryType: FC<any> = ({
                                         ...register("flatNum", {
                                             required: true,
                                         }),
+                                        minLength: {
+                                            value: 1,
+                                            message: "мінімум 1 символ",
+                                        },
+                                        maxLength: {
+                                            value: 5,
+                                            message: "максимум 5 символів",
+                                        },
                                     }}
                                     placeholder="Номер квартири"
                                 />

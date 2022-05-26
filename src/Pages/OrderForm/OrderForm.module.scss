@@ -19,6 +19,28 @@
     .deliveryTimeWrapper .deliveryTimeContent {
         display: inline-block;
         display: flex;
+        .personWrapper {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            input {
+                width: 70px;
+            }
+            label {
+                margin: 0 15px;
+            }
+            span {
+                cursor: pointer;
+                font-size: 35px;
+                display: inline-block;
+                &:hover {
+                    color: $greenSoft;
+                }
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
     }
     .deliveryTimeWrapper .callBack {
         top: 100px;

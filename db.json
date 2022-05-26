@@ -1950,6 +1950,55 @@
           "amount": 2
         }
       ]
+    },
+    {
+      "name": "dima",
+      "phone": "6774575457",
+      "street": "banderu",
+      "houseNumber": "2",
+      "flatNum": "2",
+      "porch": "3",
+      "floor": "5",
+      "comment": "pasdasdaddasd",
+      "callBack": false,
+      "person": "3",
+      "agreement": true,
+      "id": 1653504567840,
+      "orderList": [
+        {
+          "id": 28,
+          "name": "BeerMix",
+          "available": true,
+          "price": 22,
+          "type": "beer",
+          "capacity": 0.5,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg",
+          "amount": 9
+        },
+        {
+          "id": 72,
+          "name": "Суп з фрикадельками",
+          "available": true,
+          "price": 66,
+          "type": "soup",
+          "capacity": 0.52,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/BG8TMPZ/recept-3337-b843.jpg",
+          "amount": 1
+        },
+        {
+          "id": 70,
+          "name": "Горозовий суп",
+          "available": true,
+          "price": 96,
+          "type": "soup",
+          "capacity": 0.52,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/ZgsdNPC/32.webp",
+          "amount": 1
+        }
+      ]
     }
   ],
   "DiscountArr": [

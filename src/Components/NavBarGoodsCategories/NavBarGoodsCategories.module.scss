@@ -23,12 +23,9 @@
             border-bottom: solid 3px transparent;
 
             &:hover {
+                color: $white;
             }
         }
         margin: 0 5px;
     }
-}
-
-.active {
-    color: red;
 }

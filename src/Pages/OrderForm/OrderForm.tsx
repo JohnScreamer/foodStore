@@ -55,7 +55,6 @@ const OrderForm: FC = () => {
     };
     const navigate = useNavigate();
     const [priceError, setPriceError] = useState(false);
-    console.log(errors, totalPrice);
 
     return (
         <>

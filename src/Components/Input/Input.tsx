@@ -9,6 +9,10 @@ interface IInput {
     w25?: boolean;
     error?: boolean;
     number?: boolean;
+    startValue?: number;
+    onChange?: any;
+    focus?: boolean;
+    id?: string;
 }
 
 const Input: FC<IInput> = ({
@@ -19,8 +23,32 @@ const Input: FC<IInput> = ({
     w50,
     error,
     number,
+    startValue,
+    onChange,
+    focus,
+    id,
 }) => {
     const register = control ? control : "";
+
+    if (onChange) {
+        return (
+            <input
+                id={id}
+                type={number ? "number" : "text"}
+                {...register}
+                onChange={(e) => onChange(e.currentTarget.value)}
+                value={startValue}
+                placeholder={placeholder}
+                className={classNames(s.input, {
+                    [s.w100]: w100,
+                    [s.w50]: w50,
+                    [s.w25]: w25,
+                    [s.error]: error,
+                    [s.focus]: focus,
+                })}
+            ></input>
+        );
+    }
     return (
         <input
             type={number ? "number" : "text"}
