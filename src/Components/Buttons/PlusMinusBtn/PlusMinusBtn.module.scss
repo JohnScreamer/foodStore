@@ -31,6 +31,9 @@
     @include adaptive-value("padding-right", 22, 15);
     @include adaptive-value("padding-top", 20, 18.5);
     @include adaptive-value("padding-bottom", 20, 18.5);
+    &:active {
+        transform: scale(0.9);
+    }
 
     &:hover {
         @extend %bsd;
