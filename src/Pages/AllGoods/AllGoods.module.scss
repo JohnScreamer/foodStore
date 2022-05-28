@@ -87,3 +87,7 @@
 .MuiMenuItem-root {
     font-size: 2rem;
 }
+.paginationWrapper {
+    width: 100%;
+    @extend %flex-element-center;
+}

@@ -48,8 +48,10 @@ export interface IFilter {
         | "alcohols"
         | "beers"
         | "hotDish"
-        | "snacks";
-    byPrice: null | "fromExpensive" | "fromCheaper";
+        | "snacks"
+        | any;
+    byPrice?: null | "fromExpensive" | "fromCheaper" | any;
+    page: number | any;
 }
 
 export interface IOnSubmit {
@@ -62,8 +64,8 @@ export interface ISelect {
 }
 
 export const filterByPrice: ISelect[] = [
-    { name: "Від дорогих до дешевих", value: "fromExpensive" },
-    { name: "ВІд дешевих до дорогих", value: "fromCheaper" },
+    { name: "Від дорогих до дешевих", value: "desc" },
+    { name: "ВІд дешевих до дорогих", value: "asc" },
 ];
 
 export const filterByName: ISelect[] = [

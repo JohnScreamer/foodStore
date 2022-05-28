@@ -14,6 +14,7 @@ interface DropListType {
     control: any;
     rule?: boolean;
     ruleName?: string;
+    defaultValues?: string | null;
 }
 
 const DropList: FC<DropListType> = ({
@@ -22,15 +23,15 @@ const DropList: FC<DropListType> = ({
     control,
     rule,
     ruleName,
+    defaultValues,
 }) => {
-    const [value, setValue]: any = useState("");
+    const [value, setValue]: any = useState(defaultValues ? defaultValues : "");
 
     const optionsArr = options.map((option) => (
         <MenuItem key={option.name} value={`${option.value}`}>
             {option.name}
         </MenuItem>
     ));
-
     if (rule) {
         return (
             <>
@@ -76,6 +77,60 @@ const DropList: FC<DropListType> = ({
                                         onChange(e.target.value);
                                     }}
                                 >
+                                    {optionsArr}
+                                </Select>
+                            )}
+                        />
+                    </FormControl>
+                </Box>
+            </>
+        );
+    }
+
+    if (defaultValues) {
+        return (
+            <>
+                <Box
+                    sx={{
+                        borderRadius: 50,
+                        color: "white",
+                    }}
+                >
+                    <FormControl
+                        sx={{
+                            color: "white,",
+                        }}
+                        fullWidth
+                    >
+                        <InputLabel
+                            sx={{
+                                color: "white",
+                            }}
+                            id="demo-simple-select-label"
+                        >
+                            {ruleName}
+                        </InputLabel>
+                        <Controller
+                            control={control}
+                            defaultValue={value}
+                            name={name}
+                            render={({ field: { onChange } }) => (
+                                <Select
+                                    sx={{
+                                        width: 200,
+                                        color: "white",
+                                        border: "2px solid rgba(255, 255, 255, 0.1)",
+                                    }}
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    value={value}
+                                    label={name}
+                                    onChange={(e) => {
+                                        setValue(e.target.value);
+                                        onChange(e.target.value);
+                                    }}
+                                >
+                                    <MenuItem value={0}>Без фільтра</MenuItem>
                                     {optionsArr}
                                 </Select>
                             )}

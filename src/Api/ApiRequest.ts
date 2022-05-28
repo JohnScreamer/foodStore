@@ -19,9 +19,28 @@ export const FetchOneGoodsType = (goodsType: string) => {
 export const FetchOneItem = (id: number) => {
     return BaseRequest.get(`allGoods?id=${id}`);
 };
+export const FetchAllNoFilterGoods = (page: number) => {
+    return async () => {
+        const totalPages = Math.ceil(
+            (await BaseRequest.get(`allGoods`)).data.length / 10
+        );
+        const currentPage = await BaseRequest.get(
+            `allGoods?_page=${page}&_limit=10`
+        );
+        return { totalPages, currentPage };
+    };
+};
+//--------------------------------
+export const getTotalItem = (url: string) => {
+    return BaseRequest.get(`${url}`);
+};
+export const getAllTotalGoods = (url: string) => {
+    return BaseRequest.get(`${url}`);
+};
+//------------------------------
 
 export const FetchFilterGoods = (data: IFilter) => {
-    const byPrice = data.byPrice ? "&_sort=price" : "";
+    const byPrice = data.byPrice ? `&_sort=price&_order=${data.byPrice}` : "";
     const byType = data.byType ? `&type=${data.byType}` : "";
     return BaseRequest.get(`allGoods?${byPrice + byType}`);
 };

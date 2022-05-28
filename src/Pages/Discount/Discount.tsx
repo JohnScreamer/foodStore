@@ -16,8 +16,8 @@ const Discount: FC = () => {
         (state) => state.goods
     );
     const discount = discountList?.map((discountItem) => (
-        <NavLink to={`/discount/${discountItem.id}`}>
-            <li key={discountItem.id}>
+        <NavLink key={discountItem.id} to={`/discount/${discountItem.id}`}>
+            <li>
                 <img src={discountItem.img} alt="discount img" />
                 <div>
                     <h2>{discountItem.title}</h2>

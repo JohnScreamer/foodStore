@@ -4,78 +4,40 @@ import s from "./NavBarGoodsCategories.module.scss";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
 
+interface INavBarList {
+    name: string;
+    url: string;
+}
+const NavBarList: Array<INavBarList> = [
+    { name: "Головна", url: "/" },
+    { name: "Усі товари", url: "/allGoods" },
+    { name: "Закуски", url: "/categories/snacks" },
+    { name: "Гарячі страви", url: "/categories/hotDish" },
+    { name: "Алкоголь", url: "/categories/alcohols" },
+    { name: "Пиво", url: "/categories/beers" },
+    { name: "Холодні напої", url: "/categories/drinks" },
+    { name: "Супи", url: "/categories/soups" },
+    { name: "Акції", url: "/discount" },
+];
+
 const NavBarGoodsCategories = () => {
+    const NavList = NavBarList.map((link) => (
+        <SwiperSlide key={link.name} style={{ width: "auto" }}>
+            <li>
+                <NavLink to={link.url}>{link.name}</NavLink>
+            </li>
+        </SwiperSlide>
+    ));
+
     return (
         <nav className={s.navWrapper}>
             <ul className={classNames(s.navList, "navBarInner")}>
                 <Swiper
-                    centeredSlides
-                    initialSlide={3}
-                    spaceBetween={20}
                     slidesPerView={"auto"}
-                    breakpoints={{
-                        1050: {
-                            width: 1050,
-                            slidesPerView: "auto",
-                            noSwiping: true,
-                            noSwipingClass: "swiper-slide",
-                        },
-                    }}
+                    spaceBetween={30}
+                    className="mySwiper"
                 >
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/"}>Головна</NavLink>
-                        </li>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/allGoods"}>Усі товари</NavLink>
-                        </li>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/snacks"}>Закуски</NavLink>
-                        </li>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/hotDish"}>
-                                Гарячі страви
-                            </NavLink>
-                        </li>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/alcohols"}>
-                                Алкоголь
-                            </NavLink>
-                        </li>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/beers"}>Пиво</NavLink>
-                        </li>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/drinks"}>
-                                Холодні напої
-                            </NavLink>
-                        </li>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/categories/soups"}>Супи</NavLink>
-                        </li>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <li>
-                            <NavLink to={"/discount"}>Акції</NavLink>
-                        </li>
-                    </SwiperSlide>
+                    {NavList}
                 </Swiper>
             </ul>
         </nav>

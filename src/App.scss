@@ -119,25 +119,25 @@ input {
 .sliderWrapper .swiper .swiper-slide {
     margin: 0;
 }
-.navBarInner.swiper .swiper-slide {
-    @include adaptive-value("width", 325, 250);
-}
-.navBarInner .swiper-slide {
-    width: auto;
-}
-.navBarInner .swiper {
-    max-width: 1302px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-.navBarInner .swiper-wrapper {
-    max-width: 1302px;
-    margin: 0 auto;
-    overflow: visible;
-    a {
-    }
-}
+// .navBarInner.swiper .swiper-slide {
+//     @include adaptive-value("width", 325, 250);
+// }
+// .navBarInner .swiper-slide {
+//     width: auto;
+// }
+// .navBarInner .swiper {
+//     max-width: 1302px;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: center;
+// }
+// .navBarInner .swiper-wrapper {
+//     max-width: 1302px;
+//     margin: 0 auto;
+//     overflow: visible;
+//     a {
+//     }
+// }
 .swiper-slide li .active {
     border-bottom: solid 3px $greenDeep;
 }

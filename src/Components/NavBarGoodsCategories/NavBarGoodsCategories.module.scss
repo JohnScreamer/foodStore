@@ -1,8 +1,10 @@
 @import "./../../scss/SCSSConstants.scss";
 
 .navWrapper {
-    width: 100%;
+    max-width: 1920px;
     overflow: hidden;
+
+    padding: 0 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -10,9 +12,8 @@
     font-size: 18px;
     @include adaptive-value("font-size", 18, 15);
     line-height: 21px;
+    display: flex;
     li {
-        display: block;
-
         a {
             display: inline-block;
             height: 100%;

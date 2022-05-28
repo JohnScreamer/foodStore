@@ -22,6 +22,7 @@ import LogIn from "./Pages/LogIn/LogIn";
 import SigIn from "./Components/SigIn/SigIn";
 import Page404 from "./Pages/Page404/Page404";
 import AdminPage from "./Pages/AdminPage/AdminPage";
+import axios from "axios";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -35,6 +36,7 @@ function App() {
         dispatch(RequestAllGoods());
         dispatch(RequestDiscountList());
     }, []);
+
     return (
         <div className="App">
             <Header

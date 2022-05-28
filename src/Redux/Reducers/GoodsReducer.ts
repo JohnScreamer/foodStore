@@ -4,6 +4,8 @@ import {
     FetchFilterGoods,
     FetchOneGoodsType,
     FetchOneItem,
+    getAllTotalGoods,
+    getTotalItem,
 } from "./../../Api/ApiRequest";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
@@ -65,18 +67,6 @@ const GoodsReducer = createSlice({
             .addCase(RequestAllGoods.fulfilled, (state, action) => {
                 state.goods = action.payload;
                 state.isLoading = false;
-                const goodsArr = Object.keys(action.payload).reduce(
-                    (acc: any, goodsType: any) => {
-                        //@ts-ignore
-                        acc = [...acc, ...action.payload[goodsType]];
-                        return acc;
-                    },
-                    []
-                );
-                state.allGoods = goodsArr;
-                state.pagination.totalPages = Math.ceil(
-                    goodsArr.length / state.pagination.maxItemInPage
-                );
             })
             .addCase(RequestOneGoodsType.fulfilled, (state, action) => {
                 const goodsType = action.payload.type;
@@ -95,10 +85,12 @@ const GoodsReducer = createSlice({
             })
             .addCase(FilterGoods.fulfilled, (state, action) => {
                 const filteredGoods = action.payload.response;
-                if (action.payload.data.byPrice === "fromExpensive") {
-                    filteredGoods.reverse();
-                }
+                state.isLoading = false;
+
                 state.allGoods = filteredGoods;
+            })
+            .addCase(FilterGoods.pending, (state) => {
+                state.isLoading = true;
             })
             .addCase(RequestDiscountList.fulfilled, (state, action) => {
                 state.discountList = action.payload;
@@ -106,6 +98,21 @@ const GoodsReducer = createSlice({
             })
             .addCase(RequestDiscountList.pending, (state) => {
                 state.isLoading = true;
+            })
+
+            .addCase(RequestGoods.fulfilled, (state, action) => {
+                state.allGoods = action.payload;
+                state.isLoading = false;
+            })
+            .addCase(RequestGoods.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(RequestTotalItem.fulfilled, (state, action) => {
+                state.pagination.totalPages = Math.ceil(
+                    action.payload.length / 10
+                );
+
+                state.isLoading = false;
             })
             .addMatcher(isError, (state, action: PayloadAction<string>) => {
                 state.isLoading = false;
@@ -195,4 +202,35 @@ export const RequestDiscountList = createAsyncThunk<
     }
     const data = response.data;
     return data;
+});
+
+export interface IGoodsRequest {
+    data: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
+    page: number;
+}
+interface IRequestGoodsReturn {
+    page: number;
+    type: "drinks" | "soups" | "alcohols" | "beers" | "hotDish" | "snacks";
+}
+export const RequestGoods = createAsyncThunk<
+    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
+    string,
+    { rejectValue: string }
+>("RequestGoods", async (url, { rejectWithValue }) => {
+    const response = await getAllTotalGoods(url);
+
+    return response.data;
+});
+
+export const RequestTotalItem = createAsyncThunk<
+    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
+    string,
+    { rejectValue: string }
+>("RequestTotalItem", async (url, { rejectWithValue }) => {
+    const response = await getTotalItem(url);
+    if (response.status > 300 || response.status < 199) {
+        return rejectWithValue(`Error , not get discount List`);
+    }
+
+    return response.data;
 });
