@@ -22,7 +22,7 @@ import LogIn from "./Pages/LogIn/LogIn";
 import SigIn from "./Components/SigIn/SigIn";
 import Page404 from "./Pages/Page404/Page404";
 import AdminPage from "./Pages/AdminPage/AdminPage";
-import axios from "axios";
+import EditCard from "./Pages/EditCard/EditCard";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -82,6 +82,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/order" element={<OrderForm />} />
                 <Route path="/discount" element={<Discount />} />
+                <Route path="/cardEditor" element={<EditCard />} />
 
                 <Route path="/goods/:id" element={<CardPage />} />
                 <Route

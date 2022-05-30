@@ -1,12 +1,23 @@
 import {
+    FetchDeleteGoods,
     FetchGetAllOrders,
     FetchGetAllProfiles,
     FetchLogIn,
+    FetchPatchGoods,
+    FetchPostNewGoods,
     FetchSigIn,
 } from "./../../Api/ApiRequest";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { FetchAddOrder } from "../../Api/ApiRequest";
 import { IFormOrder } from "../../InterfacesTypes/FormOrderTypes";
+import {
+    IDrinks,
+    ISoup,
+    IAlcohols,
+    IBeer,
+    IHotDish,
+    ISnack,
+} from "../../InterfacesTypes/GoodsInterface";
 
 export interface IProfile {
     id: number;
@@ -27,6 +38,7 @@ export interface IUserInitState {
     lastOrder: IFormOrder | null;
     profile?: IProfile;
     adminInfo: IAdminInfo;
+    editGoods: IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack | null;
 }
 
 const initialState: IUserInitState = {
@@ -38,12 +50,25 @@ const initialState: IUserInitState = {
         orderHistory: [],
         allUsers: [],
     },
+    editGoods: null,
 };
 
 const UserProfileReducer = createSlice({
     name: "UserProfile",
     initialState,
-    reducers: {},
+    reducers: {
+        addEditGoods: (
+            state,
+            action: PayloadAction<
+                IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack
+            >
+        ) => {
+            state.editGoods = action.payload;
+        },
+        cleanEditGoods: (state) => {
+            state.editGoods = null;
+        },
+    },
     extraReducers(builder) {
         builder
             .addCase(addOrder.fulfilled, (state, action) => {
@@ -85,6 +110,24 @@ const UserProfileReducer = createSlice({
             .addCase(GetAllOrders.pending, (state) => {
                 state.isLoading = true;
             })
+            .addCase(EdithGoods.fulfilled, (state, action) => {
+                state.isLoading = false;
+            })
+            .addCase(EdithGoods.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(AddNewGoods.fulfilled, (state, action) => {
+                state.isLoading = false;
+            })
+            .addCase(AddNewGoods.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(DeleteGoods.fulfilled, (state, action) => {
+                state.isLoading = false;
+            })
+            .addCase(DeleteGoods.pending, (state) => {
+                state.isLoading = true;
+            })
             .addMatcher(isError, (state, action) => {
                 if (action.error.message) {
                     state.error = action.error.message;
@@ -98,6 +141,7 @@ const isError = (action: PayloadAction<any>) => {
 };
 
 export default UserProfileReducer.reducer;
+export const { addEditGoods, cleanEditGoods } = UserProfileReducer.actions;
 
 export const addOrder = createAsyncThunk<any, any, { rejectValue: string }>(
     "addOrder/UserProfile",
@@ -163,4 +207,44 @@ export const GetAllUsers = createAsyncThunk<
         return rejectWithValue(`Error`);
     }
     return response.data;
+});
+
+interface IEdithGoods {
+    id: number;
+    goods: any;
+}
+
+export const EdithGoods = createAsyncThunk<
+    void,
+    IEdithGoods,
+    { rejectValue: string }
+>("EdithGoods/UserProfile", async function (data, { rejectWithValue }) {
+    const response = await FetchPatchGoods(data.goods, data.id);
+    if (response.status > 300 || response.status < 199) {
+        return rejectWithValue(`Error`);
+    }
+    console.log(response);
+});
+
+export const AddNewGoods = createAsyncThunk<
+    void,
+    IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack,
+    { rejectValue: string }
+>("EdithGoods/AddNewGoods", async function (goods, { rejectWithValue }) {
+    const response = await FetchPostNewGoods(goods);
+    if (response.status > 300 || response.status < 199) {
+        return rejectWithValue(`Error`);
+    }
+    console.log(response);
+});
+export const DeleteGoods = createAsyncThunk<
+    void,
+    number,
+    { rejectValue: string }
+>("EdithGoods/DeleteGoods", async function (id, { rejectWithValue }) {
+    const response = await FetchDeleteGoods(id);
+    if (response.status > 300 || response.status < 199) {
+        return rejectWithValue(`Error`);
+    }
+    console.log(response);
 });

@@ -13,6 +13,7 @@ interface IInput {
     onChange?: any;
     focus?: boolean;
     id?: string;
+    editName?: string;
 }
 
 const Input: FC<IInput> = ({
@@ -27,8 +28,31 @@ const Input: FC<IInput> = ({
     onChange,
     focus,
     id,
+    editName,
 }) => {
     const register = control ? control : "";
+
+    if (onChange && editName) {
+        console.log(123123);
+
+        return (
+            <input
+                id={id}
+                onChange={(e) => console.log(e.target.value)}
+                value={startValue}
+                type={number ? "number" : "text"}
+                {...register}
+                placeholder={placeholder}
+                className={classNames(s.input, {
+                    [s.w100]: w100,
+                    [s.w50]: w50,
+                    [s.w25]: w25,
+                    [s.error]: error,
+                    [s.focus]: focus,
+                })}
+            ></input>
+        );
+    }
 
     if (onChange) {
         return (

@@ -65,13 +65,29 @@ const GoodsReducer = createSlice({
                 state.isLoading = true;
             })
             .addCase(RequestAllGoods.fulfilled, (state, action) => {
-                state.goods = action.payload;
                 state.isLoading = false;
+                action.payload.forEach((goodsItem) => {
+                    //@ts-ignore
+                    state.goods[goodsItem.type] === null
+                        ? //@ts-ignore
+                          (state.goods[goodsItem.type] = [])
+                        : //@ts-ignore
+                          !state.goods[goodsItem.type].find(
+                              (el: any) => el.id === goodsItem.id
+                          ) &&
+                          //@ts-ignore
+                          (state.goods[goodsItem.type] = [
+                              //@ts-ignore
+                              ...state.goods[goodsItem.type],
+                              goodsItem,
+                          ]);
+                });
             })
             .addCase(RequestOneGoodsType.fulfilled, (state, action) => {
                 const goodsType = action.payload.type;
                 state.isLoading = false;
-                state.goods[goodsType] = action.payload.data;
+                if (!state.goods[goodsType])
+                    state.goods[goodsType] = action.payload.data;
             })
             .addCase(RequestOneGoodsType.pending, (state) => {
                 state.isLoading = true;
@@ -132,7 +148,7 @@ export const { getDiscountItem } = GoodsReducer.actions;
 ///////////-----AsyncThunk-----///////////
 
 export const RequestAllGoods = createAsyncThunk<
-    IGoods,
+    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
     undefined,
     { rejectValue: string }
 >("AllGoods/goods", async function (_, { rejectWithValue }) {

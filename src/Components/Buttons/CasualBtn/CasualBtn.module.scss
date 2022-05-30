@@ -27,3 +27,10 @@
 .fill {
     background: $greenGradient;
 }
+.red {
+    background: red;
+    &:hover {
+        border: 1px solid gold;
+        background: rgb(146, 5, 5);
+    }
+}

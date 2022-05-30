@@ -70,9 +70,20 @@ export const filterByPrice: ISelect[] = [
 
 export const filterByName: ISelect[] = [
     { name: "Гарячі страви", value: "hotDish" },
-    { name: "Пиво", value: "beer" },
-    { name: "Супи", value: "soup" },
-    { name: "Закуски", value: "snack" },
+    { name: "Пиво", value: "beers" },
+    { name: "Супи", value: "soups" },
+    { name: "Закуски", value: "snacks" },
     { name: "Напої", value: "drinks" },
-    { name: "Алкоголь", value: "alcohol" },
+    { name: "Алкоголь", value: "alcohols" },
 ];
+
+export const defaultEditValue = {
+    id: "",
+    name: "",
+    price: "",
+    description: "",
+    img: "",
+    type: "",
+    capacity: "",
+    weight: "",
+};

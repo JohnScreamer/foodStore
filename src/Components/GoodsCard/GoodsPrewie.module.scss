@@ -1,6 +1,6 @@
 @import "./../../scss/SCSSConstants.scss";
 
-.cardWrapper {
+.cardWrapperPreview {
     position: relative;
     width: 325px;
     @include adaptive-value("width", 325, 250);
@@ -15,21 +15,11 @@
 
     margin: 0 10px;
 
-    .btnEdit {
-        background: none;
-        width: 40px;
-        height: 40px;
-        svg {
-            fill: $white;
-        }
-    }
-
     &:hover {
         z-index: 2;
         transform: translateY(-3px);
         box-shadow: 5px 10px 30px black;
         display: flex;
-        position: absolute;
         .name {
             overflow: visible;
             display: block;

@@ -146,9 +146,14 @@ const Header: FC<IHeader> = ({
                             <div className={s.nameWrapper}>
                                 <NavLink to={"/"}>{name}</NavLink>
                                 {isAdmin && (
-                                    <NavLink to={"/admin"}>
-                                        <b>dashboard</b>
-                                    </NavLink>
+                                    <>
+                                        <NavLink to={"/admin"}>
+                                            <b>dashboard</b>
+                                        </NavLink>
+                                        <NavLink to={"/cardEditor"}>
+                                            <b>Add item</b>
+                                        </NavLink>
+                                    </>
                                 )}
                             </div>
                         ) : (

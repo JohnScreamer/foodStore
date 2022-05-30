@@ -9,12 +9,12 @@ export const BaseRequest = axios.create({
     withCredentials: true,
 });
 
-export const FetchAllGoods = () => BaseRequest.get("goods");
+export const FetchAllGoods = () => BaseRequest.get("allGoods");
 export const GetFetchGoods = (goodsType: string) =>
     BaseRequest.get(`${goodsType}`);
 
 export const FetchOneGoodsType = (goodsType: string) => {
-    return BaseRequest.get(`/${goodsType}`);
+    return BaseRequest.get(`/allGoods?type=${goodsType}`);
 };
 export const FetchOneItem = (id: number) => {
     return BaseRequest.get(`allGoods?id=${id}`);
@@ -66,4 +66,16 @@ export const FetchGetAllOrders = () => {
 };
 export const FetchGetAllProfiles = () => {
     return BaseRequest.get("/Profile");
+};
+
+export const FetchPostNewGoods = (goods: any) => {
+    return BaseRequest.post("/allGoods", { ...goods });
+};
+
+export const FetchPatchGoods = (goods: any, id: number) => {
+    return BaseRequest.patch(`/allGoods/${id}`, { ...goods });
+};
+
+export const FetchDeleteGoods = (id: number) => {
+    return BaseRequest.delete(`/allGoods/${id}`);
 };

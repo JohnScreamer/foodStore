@@ -9,9 +9,11 @@ interface ICasualBtn {
     brr?: boolean;
     fill?: boolean;
     callBack?: () => void;
+    red?: boolean;
 }
 const CasualBtn: FC<ICasualBtn> = ({
     children,
+    red,
     br,
     brl,
     brr,
@@ -33,6 +35,7 @@ const CasualBtn: FC<ICasualBtn> = ({
                     [s.brl]: brl,
                     [s.brr]: brr,
                     [s.fill]: fill,
+                    [s.red]: red,
                 })}
             >
                 {children}
@@ -48,6 +51,7 @@ const CasualBtn: FC<ICasualBtn> = ({
                     [s.brl]: brl,
                     [s.brr]: brr,
                     [s.fill]: fill,
+                    [s.red]: red,
                 })}
             >
                 {children}
@@ -61,6 +65,7 @@ const CasualBtn: FC<ICasualBtn> = ({
                 [s.brl]: brl,
                 [s.brr]: brr,
                 [s.fill]: fill,
+                [s.red]: red,
             })}
         >
             {children}

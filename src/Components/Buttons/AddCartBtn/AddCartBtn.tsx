@@ -3,12 +3,13 @@ import s from "./AddCartBtn.module.scss";
 
 interface AddCartBtn {
     text: string;
+    disable?: boolean;
     callBack: () => void;
 }
 
-const AddCartBtn: FC<AddCartBtn> = ({ text, callBack }) => {
+const AddCartBtn: FC<AddCartBtn> = ({ text, callBack, disable }) => {
     return (
-        <button className={s.btn} onClick={callBack}>
+        <button disabled={disable} className={s.btn} onClick={callBack}>
             <span>{text}</span>
             <svg
                 width="24"

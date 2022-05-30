@@ -1,526 +1,4 @@
 {
-  "beers": [
-    {
-      "id": 126,
-      "name": "Балтика 9",
-      "available": true,
-      "price": 39,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/qsmGNG0/Biere-Baltika-9-blonde-8-0-45-L-4600682409458.jpg"
-    },
-    {
-      "id": 26,
-      "name": "Рогань Світле",
-      "available": false,
-      "price": 14,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/mJfmz22/8580.jpg"
-    },
-    {
-      "id": 27,
-      "name": "Оболонь Світле",
-      "available": true,
-      "price": 10,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/mJfmz22/8580.jpg"
-    },
-    {
-      "id": 28,
-      "name": "BeerMix",
-      "available": true,
-      "price": 22,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg"
-    },
-    {
-      "id": 29,
-      "name": "Ice lime",
-      "available": true,
-      "price": 26,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/7zT08wY/ice-mix-lime-05-l-pivo-svetloe-so-vkusom-lajma-steklo.jpg"
-    },
-    {
-      "id": 30,
-      "name": "KRONENBOURG 1664 BLANC",
-      "available": true,
-      "price": 26,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/SJ3JfrM/item-764-kronenburg.jpg"
-    },
-    {
-      "id": 31,
-      "name": "Zibert ",
-      "available": true,
-      "price": 26,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-    },
-    {
-      "id": 532,
-      "name": "Bud ",
-      "available": true,
-      "price": 27,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/wQVvGfX/20180822-1534920774-SNCPSG10-obj-0-1-jpg-oe-jpg-pf-jpg-350nowm-jpg-350x.webp"
-    },
-    {
-      "id": 32,
-      "name": "Staropramen ",
-      "available": true,
-      "price": 36,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/fNCFkfR/catalog-product-gal-mob-1889.jpg"
-    },
-    {
-      "id": 33,
-      "name": "Corona extra ",
-      "available": true,
-      "price": 46,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-    },
-    {
-      "id": 332,
-      "name": "Старий Мельник",
-      "available": true,
-      "price": 26,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/kq5rp9b/pivo-starij-melnik-z-dizhki-myagkoe-svetloe.jpg"
-    },
-    {
-      "id": 35,
-      "name": "Stella Artois",
-      "available": true,
-      "price": 66,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/zsQ96Nk/bottle-review-stella-artois-720x720-af8a80477721421d9ad26e22d79f50c7.jpg"
-    },
-    {
-      "id": 65,
-      "name": "Hoegaarden",
-      "available": true,
-      "price": 66,
-      "type": "beer",
-      "capacity": 0.5,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Ln5GsQz/full-hoegaarden-blanch-0-75-jpg.jpg"
-    }
-  ],
-  "soups": [
-    {
-      "id": 10,
-      "name": "Борщ",
-      "available": true,
-      "price": 105,
-      "type": "hotDish",
-      "capacity": 0.45,
-      "description": "Просто їда",
-      "img": "https://i.ibb.co/MR1F5Q7/Postnyi-borsh-polesia-site-Web.jpg"
-    },
-    {
-      "id": 67,
-      "name": "Ramen",
-      "available": true,
-      "price": 126,
-      "type": "soup",
-      "capacity": 0.45,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/LvsJ54f/tonkotsuramenfront-500x375.jpg"
-    },
-    {
-      "id": 68,
-      "name": "Солянка",
-      "available": true,
-      "price": 66,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/pyYc4N2/recept-5226-bgf0.jpg"
-    },
-    {
-      "id": 69,
-      "name": "Сирний суп",
-      "available": true,
-      "price": 96,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/brSdJ8P/sirsup-1065x684-r.jpg"
-    },
-    {
-      "id": 70,
-      "name": "Горозовий суп",
-      "available": true,
-      "price": 96,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/ZgsdNPC/32.webp"
-    },
-    {
-      "id": 71,
-      "name": "Гуцульський бограч",
-      "available": true,
-      "price": 106,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-    },
-    {
-      "id": 72,
-      "name": "Суп з фрикадельками",
-      "available": true,
-      "price": 66,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/BG8TMPZ/recept-3337-b843.jpg"
-    },
-    {
-      "id": 73,
-      "name": "Гарбузовий суп-пюре з сиром",
-      "available": true,
-      "price": 126,
-      "type": "soup",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/3y21qmM/pexels-photo-1277483.webp"
-    }
-  ],
-  "alcohols": [
-    {
-      "id": 74,
-      "name": "Revo",
-      "available": true,
-      "price": 68,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg"
-    },
-    {
-      "id": 75,
-      "name": "Rom-cola",
-      "available": true,
-      "price": 30,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-    },
-    {
-      "id": 76,
-      "name": "Garage lemon",
-      "available": true,
-      "price": 26,
-      "type": "alcohol",
-      "capacity": 0.47,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/kJc4PLk/garage-hard-lemon-4-275cl.jpg"
-    },
-    {
-      "id": 77,
-      "name": "Вино 777",
-      "available": true,
-      "price": 76,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/WvTH5bT/bahus-portvejn-777-vino-beloe-polusladkoe-1-l.jpg"
-    },
-    {
-      "id": 78,
-      "name": "Ігристе вино Dom Perignon",
-      "available": true,
-      "price": 62126,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/NnN3wbJ/53ed9f859e8f3f79929831f98b8c5741-800x800.jpg"
-    },
-    {
-      "id": 79,
-      "name": "Шампанське Moet Chandon Rose",
-      "available": true,
-      "price": 2126,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Lv2TzQZ/moet-et-chandon-rose-bouteille-700x700.jpg"
-    },
-    {
-      "id": 18,
-      "name": "Горілка Козацька Рада «Класична»",
-      "available": true,
-      "price": 149,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/8BtztM1/kozacka-rada-gorilka-klasichna-40-1-l-sklo.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Горілка Фінляндія",
-      "available": true,
-      "price": 179,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/HTvpNZq/images.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Горілка Хлібний Дар «Класична»",
-      "available": true,
-      "price": 139,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/vXW33h2/image.jpg"
-    },
-    {
-      "id": 21,
-      "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
-      "available": true,
-      "price": 269,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg"
-    },
-    {
-      "id": 22,
-      "name": "Самогон",
-      "available": true,
-      "price": 119,
-      "type": "alcohol",
-      "capacity": 0.52,
-      "description": "Знаешь ли ты, вдоль ночных дорог. Шла босиком не жалея ног. ",
-      "img": "https://i.ibb.co/SXkKZs3/1.jpg"
-    }
-  ],
-  "drinks": [
-    {
-      "id": 23,
-      "name": "Кола",
-      "available": true,
-      "price": 49,
-      "type": "drinks",
-      "capacity": 0.45,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/6ntYw71/Tkt-JTI1-RDAl-Mj-U5-QSUy-NUQw-JTI1-OUUl-Mj-VEMCUy-NTl-BJTI1-RDAl-Mj-U5-MC0l-Mj-VEMCUy-NTl-BJTI1-RDAl.png"
-    },
-    {
-      "id": 24,
-      "name": "Сік яблучний",
-      "available": true,
-      "price": 69,
-      "type": "drinks",
-      "capacity": 0.45,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/D55DDtN/2.jpg"
-    },
-    {
-      "id": 25,
-      "name": "Сік апельсиновий",
-      "available": true,
-      "price": 69,
-      "type": "drinks",
-      "capacity": 0.45,
-      "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-    }
-  ],
-  "hotDish": [
-    {
-      "id": 9,
-      "name": "Вареники",
-      "available": true,
-      "price": 90,
-      "type": "hotDish",
-      "weight": 250,
-      "description": "Просто їда",
-      "img": "https://i.ibb.co/RHfH8LG/3.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Пів лобстера гриль",
-      "available": true,
-      "price": 249,
-      "type": "hotDish",
-      "weight": 90,
-      "description": "ЛАКШЕРІ ",
-      "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png"
-    },
-    {
-      "id": 12,
-      "name": "Пельмені",
-      "available": true,
-      "price": 89,
-      "type": "hotDish",
-      "weight": 190,
-      "description": "Просто їда ",
-      "img": "https://i.ibb.co/PQJB143/legenda-pub-menu-1002.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Пательня Куряча",
-      "available": true,
-      "price": 189,
-      "type": "hotDish",
-      "weight": 350,
-      "description": "Просто їда ",
-      "img": "https://i.ibb.co/qk4Jfdp/legenda-pub-menu-41.jpg"
-    },
-    {
-      "id": 14,
-      "name": "Шніцель",
-      "available": true,
-      "price": 89,
-      "type": "hotDish",
-      "weight": 250,
-      "description": "Просто їда ",
-      "img": "https://i.ibb.co/7Ycyx2P/5.jpg"
-    },
-    {
-      "id": 15,
-      "name": "Картопля по-домашньому",
-      "available": true,
-      "price": 89,
-      "type": "hotDish",
-      "weight": 240,
-      "description": "Просто їда ",
-      "img": "https://i.ibb.co/1nHcdW8/maxresdefault.jpg"
-    },
-    {
-      "id": 16,
-      "name": "Картопляне пюре з маслом ",
-      "available": true,
-      "price": 59,
-      "type": "hotDish",
-      "weight": 190,
-      "description": "Просто їда як в садку ",
-      "img": "https://i.ibb.co/5MMmf4j/legenda-pub-menu-7.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Даруни",
-      "available": true,
-      "price": 100,
-      "type": "hotDish",
-      "weight": 250,
-      "description": "Просто їда богів .",
-      "img": "https://i.ibb.co/z8tCYwf/draniki-s-cesnokom.jpg"
-    }
-  ],
-  "snacks": [
-    {
-      "id": 1,
-      "name": "Картопля фрі",
-      "available": true,
-      "price": 70,
-      "type": "snack",
-      "weight": 150,
-      "description": "Просто їда богів .Класно, круто, дешево.",
-      "img": "https://i.ibb.co/Pg2rPf1/gp-965.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Свинячі вушка",
-      "available": true,
-      "price": 100,
-      "type": "snack",
-      "weight": 100,
-      "description": "Під пивко норм",
-      "img": "https://i.ibb.co/jZsc26g/ushki.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Паштет",
-      "available": true,
-      "price": 120,
-      "type": "snack",
-      "weight": 110,
-      "description": "Під пивко норм",
-      "img": "https://i.ibb.co/HDbNgnQ/liverpate-11.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Піца з сотки",
-      "available": true,
-      "price": 25,
-      "type": "snack",
-      "weight": 210,
-      "description": "Це просто любов",
-      "img": "https://i.ibb.co/kyC1d0v/5dde72c1cb22f.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Косичка фрі",
-      "available": true,
-      "price": 85,
-      "type": "snack",
-      "weight": 150,
-      "description": "Під пивко норм",
-      "img": "https://i.ibb.co/MRpByX3/44f2c815c192b2843f2561c375b953a4-826x0.png"
-    },
-    {
-      "id": 7,
-      "name": "Шаурма",
-      "available": true,
-      "price": 65,
-      "type": "snack",
-      "weight": 200,
-      "description": "Під пивко норм",
-      "img": "https://i.ibb.co/jD7tp85/shaurma-s-shashlikom-577961.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Арахіс",
-      "available": true,
-      "price": 100,
-      "type": "snack",
-      "weight": 100,
-      "description": "Під пивко норм",
-      "img": "https://i.ibb.co/GQhhH09/4.jpg"
-    },
-    {
-      "id": 17,
-      "name": "Сирні палочки з соусом Тар-Тар ",
-      "available": true,
-      "price": 99,
-      "type": "snack",
-      "weight": 140,
-      "description": "Просто їда  ",
-      "img": "https://i.ibb.co/Jq6bJq1/legenda-pub-menu-49.jpg"
-    }
-  ],
   "allGoods": [
     {
       "id": 9,
@@ -558,19 +36,21 @@
       "available": true,
       "price": 189,
       "type": "hotDish",
-      "weight": 350,
-      "description": "Просто їда ",
-      "img": "https://i.ibb.co/qk4Jfdp/legenda-pub-menu-41.jpg"
+      "weight": "350",
+      "description": "Просто їда 32",
+      "img": "https://i.ibb.co/qk4Jfdp/legenda-pub-menu-41.jpg",
+      "capacity": ""
     },
     {
       "id": 14,
       "name": "Шніцель",
       "available": true,
-      "price": 89,
+      "price": 99,
       "type": "hotDish",
-      "weight": 250,
+      "weight": "250",
       "description": "Просто їда ",
-      "img": "https://i.ibb.co/7Ycyx2P/5.jpg"
+      "img": "https://i.ibb.co/7Ycyx2P/5.jpg",
+      "capacity": ""
     },
     {
       "id": 15,
@@ -603,8 +83,8 @@
       "img": "https://i.ibb.co/z8tCYwf/draniki-s-cesnokom.jpg"
     },
     {
-      "id": 23,
-      "name": "Кола",
+      "id": 567623,
+      "name": "Кока-Кола",
       "available": true,
       "price": 49,
       "type": "drinks",
@@ -624,7 +104,7 @@
     },
     {
       "id": 25,
-      "name": "Сік апельсиновий",
+      "name": "Сік апельсиновий!",
       "available": true,
       "price": 69,
       "type": "drinks",
@@ -637,7 +117,7 @@
       "name": "Revo",
       "available": true,
       "price": 68,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg"
@@ -647,7 +127,7 @@
       "name": "Rom-cola",
       "available": true,
       "price": 30,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
@@ -657,7 +137,7 @@
       "name": "Garage lemon",
       "available": true,
       "price": 26,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.47,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/kJc4PLk/garage-hard-lemon-4-275cl.jpg"
@@ -667,7 +147,7 @@
       "name": "Вино 777",
       "available": true,
       "price": 76,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/WvTH5bT/bahus-portvejn-777-vino-beloe-polusladkoe-1-l.jpg"
@@ -677,7 +157,7 @@
       "name": "Ігристе вино Dom Perignon",
       "available": true,
       "price": 62126,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/NnN3wbJ/53ed9f859e8f3f79929831f98b8c5741-800x800.jpg"
@@ -687,7 +167,7 @@
       "name": "Шампанське Moet Chandon Rose",
       "available": true,
       "price": 2126,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Lv2TzQZ/moet-et-chandon-rose-bouteille-700x700.jpg"
@@ -697,7 +177,7 @@
       "name": "Горілка Козацька Рада «Класична»",
       "available": true,
       "price": 149,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/8BtztM1/kozacka-rada-gorilka-klasichna-40-1-l-sklo.jpg"
@@ -707,7 +187,7 @@
       "name": "Горілка Фінляндія",
       "available": true,
       "price": 179,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/HTvpNZq/images.jpg"
@@ -717,7 +197,7 @@
       "name": "Горілка Хлібний Дар «Класична»",
       "available": true,
       "price": 139,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/vXW33h2/image.jpg"
@@ -727,7 +207,7 @@
       "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
       "available": true,
       "price": 269,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg"
@@ -737,7 +217,7 @@
       "name": "Самогон",
       "available": true,
       "price": 119,
-      "type": "alcohol",
+      "type": "alcohols",
       "capacity": 0.52,
       "description": "Знаешь ли ты, вдоль ночных дорог. Шла босиком не жалея ног. ",
       "img": "https://i.ibb.co/SXkKZs3/1.jpg"
@@ -757,7 +237,7 @@
       "name": "Ramen",
       "available": true,
       "price": 126,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.45,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/LvsJ54f/tonkotsuramenfront-500x375.jpg"
@@ -767,7 +247,7 @@
       "name": "Солянка",
       "available": true,
       "price": 66,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/pyYc4N2/recept-5226-bgf0.jpg"
@@ -777,7 +257,7 @@
       "name": "Сирний суп",
       "available": true,
       "price": 96,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/brSdJ8P/sirsup-1065x684-r.jpg"
@@ -787,7 +267,7 @@
       "name": "Горозовий суп",
       "available": true,
       "price": 96,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/ZgsdNPC/32.webp"
@@ -797,7 +277,7 @@
       "name": "Гуцульський бограч",
       "available": true,
       "price": 106,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
@@ -807,7 +287,7 @@
       "name": "Суп з фрикадельками",
       "available": true,
       "price": 66,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/BG8TMPZ/recept-3337-b843.jpg"
@@ -817,7 +297,7 @@
       "name": "Гарбузовий суп-пюре з сиром",
       "available": true,
       "price": 126,
-      "type": "soup",
+      "type": "soups",
       "capacity": 0.52,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/3y21qmM/pexels-photo-1277483.webp"
@@ -827,7 +307,7 @@
       "name": "Картопля фрі",
       "available": true,
       "price": 70,
-      "type": "snack",
+      "type": "snacks",
       "weight": 150,
       "description": "Просто їда богів .Класно, круто, дешево.",
       "img": "https://i.ibb.co/Pg2rPf1/gp-965.jpg"
@@ -837,7 +317,7 @@
       "name": "Свинячі вушка",
       "available": true,
       "price": 100,
-      "type": "snack",
+      "type": "snacks",
       "weight": 100,
       "description": "Під пивко норм",
       "img": "https://i.ibb.co/jZsc26g/ushki.jpg"
@@ -847,7 +327,7 @@
       "name": "Паштет",
       "available": true,
       "price": 120,
-      "type": "snack",
+      "type": "snacks",
       "weight": 110,
       "description": "Під пивко норм",
       "img": "https://i.ibb.co/HDbNgnQ/liverpate-11.jpg"
@@ -857,7 +337,7 @@
       "name": "Піца з сотки",
       "available": true,
       "price": 25,
-      "type": "snack",
+      "type": "snacks",
       "weight": 210,
       "description": "Це просто любов",
       "img": "https://i.ibb.co/kyC1d0v/5dde72c1cb22f.jpg"
@@ -867,7 +347,7 @@
       "name": "Косичка фрі",
       "available": true,
       "price": 85,
-      "type": "snack",
+      "type": "snacks",
       "weight": 150,
       "description": "Під пивко норм",
       "img": "https://i.ibb.co/MRpByX3/44f2c815c192b2843f2561c375b953a4-826x0.png"
@@ -877,7 +357,7 @@
       "name": "Шаурма",
       "available": true,
       "price": 65,
-      "type": "snack",
+      "type": "snacks",
       "weight": 200,
       "description": "Під пивко норм",
       "img": "https://i.ibb.co/jD7tp85/shaurma-s-shashlikom-577961.jpg"
@@ -887,7 +367,7 @@
       "name": "Арахіс",
       "available": true,
       "price": 100,
-      "type": "snack",
+      "type": "snacks",
       "weight": 100,
       "description": "Під пивко норм",
       "img": "https://i.ibb.co/GQhhH09/4.jpg"
@@ -897,7 +377,7 @@
       "name": "Сирні палочки з соусом Тар-Тар ",
       "available": true,
       "price": 99,
-      "type": "snack",
+      "type": "snacks",
       "weight": 140,
       "description": "Просто їда  ",
       "img": "https://i.ibb.co/Jq6bJq1/legenda-pub-menu-49.jpg"
@@ -907,7 +387,7 @@
       "name": "Балтика 9",
       "available": true,
       "price": 39,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/qsmGNG0/Biere-Baltika-9-blonde-8-0-45-L-4600682409458.jpg"
@@ -917,7 +397,7 @@
       "name": "Рогань Світле",
       "available": false,
       "price": 14,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/mJfmz22/8580.jpg"
@@ -927,27 +407,27 @@
       "name": "Оболонь Світле",
       "available": true,
       "price": 10,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/mJfmz22/8580.jpg"
     },
     {
       "id": 28,
-      "name": "BeerMix",
+      "name": "BeersMix",
       "available": true,
       "price": 22,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
-      "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg"
+      "img": "https://i.ibb.co/9Tgqfzf/obolon-beersmix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg"
     },
     {
       "id": 29,
       "name": "Ice lime",
       "available": true,
       "price": 26,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/7zT08wY/ice-mix-lime-05-l-pivo-svetloe-so-vkusom-lajma-steklo.jpg"
@@ -957,7 +437,7 @@
       "name": "KRONENBOURG 1664 BLANC",
       "available": true,
       "price": 26,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/SJ3JfrM/item-764-kronenburg.jpg"
@@ -967,7 +447,7 @@
       "name": "Zibert ",
       "available": true,
       "price": 26,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
@@ -977,7 +457,7 @@
       "name": "Bud ",
       "available": true,
       "price": 27,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/wQVvGfX/20180822-1534920774-SNCPSG10-obj-0-1-jpg-oe-jpg-pf-jpg-350nowm-jpg-350x.webp"
@@ -987,7 +467,7 @@
       "name": "Staropramen ",
       "available": true,
       "price": 36,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/fNCFkfR/catalog-product-gal-mob-1889.jpg"
@@ -997,7 +477,7 @@
       "name": "Corona extra ",
       "available": true,
       "price": 46,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
@@ -1007,7 +487,7 @@
       "name": "Старий Мельник",
       "available": true,
       "price": 26,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/kq5rp9b/pivo-starij-melnik-z-dizhki-myagkoe-svetloe.jpg"
@@ -1017,7 +497,7 @@
       "name": "Stella Artois",
       "available": true,
       "price": 66,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/zsQ96Nk/bottle-review-stella-artois-720x720-af8a80477721421d9ad26e22d79f50c7.jpg"
@@ -1027,536 +507,23 @@
       "name": "Hoegaarden",
       "available": true,
       "price": 66,
-      "type": "beer",
+      "type": "beers",
       "capacity": 0.5,
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/Ln5GsQz/full-hoegaarden-blanch-0-75-jpg.jpg"
+    },
+    {
+      "name": "Крабсбургер",
+      "description": "Хто проживає на дні океана",
+      "price": 299,
+      "type": "snacks",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/1899873/pub_5d7bfea743fdc000c3a7d3f6_5d7c021b3639e600ad376bd3/scale_1200",
+      "capacity": "",
+      "available": true,
+      "weight": "399",
+      "id": 1653923882411
     }
   ],
-  "goods": {
-    "beers": [
-      {
-        "id": 126,
-        "name": "Балтика 9",
-        "available": true,
-        "price": 39,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/qsmGNG0/Biere-Baltika-9-blonde-8-0-45-L-4600682409458.jpg"
-      },
-      {
-        "id": 26,
-        "name": "Рогань Світле",
-        "available": false,
-        "price": 14,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/mJfmz22/8580.jpg"
-      },
-      {
-        "id": 27,
-        "name": "Оболонь Світле",
-        "available": true,
-        "price": 10,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/mJfmz22/8580.jpg"
-      },
-      {
-        "id": 28,
-        "name": "BeerMix",
-        "available": true,
-        "price": 22,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg"
-      },
-      {
-        "id": 29,
-        "name": "Ice lime",
-        "available": true,
-        "price": 26,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/7zT08wY/ice-mix-lime-05-l-pivo-svetloe-so-vkusom-lajma-steklo.jpg"
-      },
-      {
-        "id": 30,
-        "name": "KRONENBOURG 1664 BLANC",
-        "available": true,
-        "price": 26,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/SJ3JfrM/item-764-kronenburg.jpg"
-      },
-      {
-        "id": 31,
-        "name": "Zibert ",
-        "available": true,
-        "price": 26,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-      },
-      {
-        "id": 532,
-        "name": "Bud ",
-        "available": true,
-        "price": 27,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/wQVvGfX/20180822-1534920774-SNCPSG10-obj-0-1-jpg-oe-jpg-pf-jpg-350nowm-jpg-350x.webp"
-      },
-      {
-        "id": 32,
-        "name": "Staropramen ",
-        "available": true,
-        "price": 36,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/fNCFkfR/catalog-product-gal-mob-1889.jpg"
-      },
-      {
-        "id": 33,
-        "name": "Corona extra ",
-        "available": true,
-        "price": 46,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-      },
-      {
-        "id": 332,
-        "name": "Старий Мельник",
-        "available": true,
-        "price": 26,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/kq5rp9b/pivo-starij-melnik-z-dizhki-myagkoe-svetloe.jpg"
-      },
-      {
-        "id": 35,
-        "name": "Stella Artois",
-        "available": true,
-        "price": 66,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/zsQ96Nk/bottle-review-stella-artois-720x720-af8a80477721421d9ad26e22d79f50c7.jpg"
-      },
-      {
-        "id": 65,
-        "name": "Hoegaarden",
-        "available": true,
-        "price": 66,
-        "type": "beer",
-        "capacity": 0.5,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Ln5GsQz/full-hoegaarden-blanch-0-75-jpg.jpg"
-      }
-    ],
-    "soups": [
-      {
-        "id": 10,
-        "name": "Борщ",
-        "available": true,
-        "price": 105,
-        "type": "hotDish",
-        "capacity": 0.45,
-        "description": "Просто їда",
-        "img": "https://i.ibb.co/MR1F5Q7/Postnyi-borsh-polesia-site-Web.jpg"
-      },
-      {
-        "id": 67,
-        "name": "Ramen",
-        "available": true,
-        "price": 126,
-        "type": "soup",
-        "capacity": 0.45,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/LvsJ54f/tonkotsuramenfront-500x375.jpg"
-      },
-      {
-        "id": 68,
-        "name": "Солянка",
-        "available": true,
-        "price": 66,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/pyYc4N2/recept-5226-bgf0.jpg"
-      },
-      {
-        "id": 69,
-        "name": "Сирний суп",
-        "available": true,
-        "price": 96,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/brSdJ8P/sirsup-1065x684-r.jpg"
-      },
-      {
-        "id": 70,
-        "name": "Горозовий суп",
-        "available": true,
-        "price": 96,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/ZgsdNPC/32.webp"
-      },
-      {
-        "id": 71,
-        "name": "Гуцульський бограч",
-        "available": true,
-        "price": 106,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-      },
-      {
-        "id": 72,
-        "name": "Суп з фрикадельками",
-        "available": true,
-        "price": 66,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/BG8TMPZ/recept-3337-b843.jpg"
-      },
-      {
-        "id": 73,
-        "name": "Гарбузовий суп-пюре з сиром",
-        "available": true,
-        "price": 126,
-        "type": "soup",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/3y21qmM/pexels-photo-1277483.webp"
-      }
-    ],
-    "alcohols": [
-      {
-        "id": 74,
-        "name": "Revo",
-        "available": true,
-        "price": 68,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg"
-      },
-      {
-        "id": 75,
-        "name": "Rom-cola",
-        "available": true,
-        "price": 30,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-      },
-      {
-        "id": 76,
-        "name": "Garage lemon",
-        "available": true,
-        "price": 26,
-        "type": "alcohol",
-        "capacity": 0.47,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/kJc4PLk/garage-hard-lemon-4-275cl.jpg"
-      },
-      {
-        "id": 77,
-        "name": "Вино 777",
-        "available": true,
-        "price": 76,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/WvTH5bT/bahus-portvejn-777-vino-beloe-polusladkoe-1-l.jpg"
-      },
-      {
-        "id": 78,
-        "name": "Ігристе вино Dom Perignon",
-        "available": true,
-        "price": 62126,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/NnN3wbJ/53ed9f859e8f3f79929831f98b8c5741-800x800.jpg"
-      },
-      {
-        "id": 79,
-        "name": "Шампанське Moet Chandon Rose",
-        "available": true,
-        "price": 2126,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Lv2TzQZ/moet-et-chandon-rose-bouteille-700x700.jpg"
-      },
-      {
-        "id": 18,
-        "name": "Горілка Козацька Рада «Класична»",
-        "available": true,
-        "price": 149,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/8BtztM1/kozacka-rada-gorilka-klasichna-40-1-l-sklo.jpg"
-      },
-      {
-        "id": 19,
-        "name": "Горілка Фінляндія",
-        "available": true,
-        "price": 179,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/HTvpNZq/images.jpg"
-      },
-      {
-        "id": 20,
-        "name": "Горілка Хлібний Дар «Класична»",
-        "available": true,
-        "price": 139,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/vXW33h2/image.jpg"
-      },
-      {
-        "id": 21,
-        "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
-        "available": true,
-        "price": 269,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg"
-      },
-      {
-        "id": 22,
-        "name": "Самогон",
-        "available": true,
-        "price": 119,
-        "type": "alcohol",
-        "capacity": 0.52,
-        "description": "Знаешь ли ты, вдоль ночных дорог. Шла босиком не жалея ног. ",
-        "img": "https://i.ibb.co/SXkKZs3/1.jpg"
-      }
-    ],
-    "drinks": [
-      {
-        "id": 23,
-        "name": "Кола",
-        "available": true,
-        "price": 49,
-        "type": "drinks",
-        "capacity": 0.45,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/6ntYw71/Tkt-JTI1-RDAl-Mj-U5-QSUy-NUQw-JTI1-OUUl-Mj-VEMCUy-NTl-BJTI1-RDAl-Mj-U5-MC0l-Mj-VEMCUy-NTl-BJTI1-RDAl.png"
-      },
-      {
-        "id": 24,
-        "name": "Сік яблучний",
-        "available": true,
-        "price": 69,
-        "type": "drinks",
-        "capacity": 0.45,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/D55DDtN/2.jpg"
-      },
-      {
-        "id": 25,
-        "name": "Сік апельсиновий",
-        "available": true,
-        "price": 69,
-        "type": "drinks",
-        "capacity": 0.45,
-        "description": "Для  хорошого настрою  ",
-        "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg"
-      }
-    ],
-    "hotDish": [
-      {
-        "id": 9,
-        "name": "Вареники",
-        "available": true,
-        "price": 90,
-        "type": "hotDish",
-        "weight": 250,
-        "description": "Просто їда",
-        "img": "https://i.ibb.co/RHfH8LG/3.jpg"
-      },
-      {
-        "id": 11,
-        "name": "Пів лобстера гриль",
-        "available": true,
-        "price": 249,
-        "type": "hotDish",
-        "weight": 90,
-        "description": "ЛАКШЕРІ ",
-        "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png"
-      },
-      {
-        "id": 12,
-        "name": "Пельмені",
-        "available": true,
-        "price": 89,
-        "type": "hotDish",
-        "weight": 190,
-        "description": "Просто їда ",
-        "img": "https://i.ibb.co/PQJB143/legenda-pub-menu-1002.jpg"
-      },
-      {
-        "id": 13,
-        "name": "Пательня Куряча",
-        "available": true,
-        "price": 189,
-        "type": "hotDish",
-        "weight": 350,
-        "description": "Просто їда ",
-        "img": "https://i.ibb.co/qk4Jfdp/legenda-pub-menu-41.jpg"
-      },
-      {
-        "id": 14,
-        "name": "Шніцель",
-        "available": true,
-        "price": 89,
-        "type": "hotDish",
-        "weight": 250,
-        "description": "Просто їда ",
-        "img": "https://i.ibb.co/7Ycyx2P/5.jpg"
-      },
-      {
-        "id": 15,
-        "name": "Картопля по-домашньому",
-        "available": true,
-        "price": 89,
-        "type": "hotDish",
-        "weight": 240,
-        "description": "Просто їда ",
-        "img": "https://i.ibb.co/1nHcdW8/maxresdefault.jpg"
-      },
-      {
-        "id": 16,
-        "name": "Картопляне пюре з маслом ",
-        "available": true,
-        "price": 59,
-        "type": "hotDish",
-        "weight": 190,
-        "description": "Просто їда як в садку ",
-        "img": "https://i.ibb.co/5MMmf4j/legenda-pub-menu-7.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Даруни",
-        "available": true,
-        "price": 100,
-        "type": "hotDish",
-        "weight": 250,
-        "description": "Просто їда богів .",
-        "img": "https://i.ibb.co/z8tCYwf/draniki-s-cesnokom.jpg"
-      }
-    ],
-    "snacks": [
-      {
-        "id": 1,
-        "name": "Картопля фрі",
-        "available": true,
-        "price": 70,
-        "type": "snack",
-        "weight": 150,
-        "description": "Просто їда богів .Класно, круто, дешево.",
-        "img": "https://i.ibb.co/Pg2rPf1/gp-965.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Свинячі вушка",
-        "available": true,
-        "price": 100,
-        "type": "snack",
-        "weight": 100,
-        "description": "Під пивко норм",
-        "img": "https://i.ibb.co/jZsc26g/ushki.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Паштет",
-        "available": true,
-        "price": 120,
-        "type": "snack",
-        "weight": 110,
-        "description": "Під пивко норм",
-        "img": "https://i.ibb.co/HDbNgnQ/liverpate-11.jpg"
-      },
-      {
-        "id": 5,
-        "name": "Піца з сотки",
-        "available": true,
-        "price": 25,
-        "type": "snack",
-        "weight": 210,
-        "description": "Це просто любов",
-        "img": "https://i.ibb.co/kyC1d0v/5dde72c1cb22f.jpg"
-      },
-      {
-        "id": 6,
-        "name": "Косичка фрі",
-        "available": true,
-        "price": 85,
-        "type": "snack",
-        "weight": 150,
-        "description": "Під пивко норм",
-        "img": "https://i.ibb.co/MRpByX3/44f2c815c192b2843f2561c375b953a4-826x0.png"
-      },
-      {
-        "id": 7,
-        "name": "Шаурма",
-        "available": true,
-        "price": 65,
-        "type": "snack",
-        "weight": 200,
-        "description": "Під пивко норм",
-        "img": "https://i.ibb.co/jD7tp85/shaurma-s-shashlikom-577961.jpg"
-      },
-      {
-        "id": 8,
-        "name": "Арахіс",
-        "available": true,
-        "price": 100,
-        "type": "snack",
-        "weight": 100,
-        "description": "Під пивко норм",
-        "img": "https://i.ibb.co/GQhhH09/4.jpg"
-      },
-      {
-        "id": 17,
-        "name": "Сирні палочки з соусом Тар-Тар ",
-        "available": true,
-        "price": 99,
-        "type": "snack",
-        "weight": 140,
-        "description": "Просто їда  ",
-        "img": "https://i.ibb.co/Jq6bJq1/legenda-pub-menu-49.jpg"
-      }
-    ]
-  },
   "profile": [
     {
       "name": "ivan",
@@ -1583,6 +550,13 @@
       "name": "asd",
       "password": "asd",
       "id": 1653562810310,
+      "isAdmin": false,
+      "userOrderHistory": []
+    },
+    {
+      "name": "Коля",
+      "password": "123456",
+      "id": 1653828061235,
       "isAdmin": false,
       "userOrderHistory": []
     }
@@ -1678,7 +652,7 @@
           "name": "Горілка Фінляндія",
           "available": true,
           "price": 179,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/HTvpNZq/images.jpg",
@@ -1689,7 +663,7 @@
           "name": "Горілка Козацька Рада «Класична»",
           "available": true,
           "price": 149,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/8BtztM1/kozacka-rada-gorilka-klasichna-40-1-l-sklo.jpg",
@@ -1728,7 +702,7 @@
           "name": "Самогон",
           "available": true,
           "price": 119,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Знаешь ли ты, вдоль ночных дорог. Шла босиком не жалея ног. ",
           "img": "https://i.ibb.co/SXkKZs3/1.jpg",
@@ -1739,7 +713,7 @@
           "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
           "available": true,
           "price": 269,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg",
@@ -1806,7 +780,7 @@
           "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
           "available": true,
           "price": 269,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg",
@@ -1867,7 +841,7 @@
           "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
           "available": true,
           "price": 269,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg",
@@ -1974,13 +948,13 @@
       "orderList": [
         {
           "id": 28,
-          "name": "BeerMix",
+          "name": "BeersMix",
           "available": true,
           "price": 22,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
-          "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg",
+          "img": "https://i.ibb.co/9Tgqfzf/obolon-beersmix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg",
           "amount": 9
         },
         {
@@ -1988,7 +962,7 @@
           "name": "Суп з фрикадельками",
           "available": true,
           "price": 66,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/BG8TMPZ/recept-3337-b843.jpg",
@@ -1999,7 +973,7 @@
           "name": "Горозовий суп",
           "available": true,
           "price": 96,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/ZgsdNPC/32.webp",
@@ -2034,13 +1008,13 @@
         },
         {
           "id": 28,
-          "name": "BeerMix",
+          "name": "BeersMix",
           "available": true,
           "price": 22,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
-          "img": "https://i.ibb.co/9Tgqfzf/obolon-beermix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg",
+          "img": "https://i.ibb.co/9Tgqfzf/obolon-beersmix-05-l-birmiks-pivo-fruktove-limon-zh-b.jpg",
           "amount": 1
         },
         {
@@ -2048,7 +1022,7 @@
           "name": "Оболонь Світле",
           "available": true,
           "price": 10,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/mJfmz22/8580.jpg",
@@ -2059,7 +1033,7 @@
           "name": "Ice lime",
           "available": true,
           "price": 26,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/7zT08wY/ice-mix-lime-05-l-pivo-svetloe-so-vkusom-lajma-steklo.jpg",
@@ -2120,7 +1094,7 @@
           "name": "KRONENBOURG 1664 BLANC",
           "available": true,
           "price": 26,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/SJ3JfrM/item-764-kronenburg.jpg",
@@ -2131,7 +1105,7 @@
           "name": "Bud ",
           "available": true,
           "price": 27,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/wQVvGfX/20180822-1534920774-SNCPSG10-obj-0-1-jpg-oe-jpg-pf-jpg-350nowm-jpg-350x.webp",
@@ -2142,7 +1116,7 @@
           "name": "Старий Мельник",
           "available": true,
           "price": 26,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/kq5rp9b/pivo-starij-melnik-z-dizhki-myagkoe-svetloe.jpg",
@@ -2164,7 +1138,7 @@
           "name": "Ramen",
           "available": true,
           "price": 126,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.45,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/LvsJ54f/tonkotsuramenfront-500x375.jpg",
@@ -2202,7 +1176,7 @@
           "name": "Revo",
           "available": true,
           "price": 68,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg",
@@ -2230,7 +1204,7 @@
           "name": "Сирний суп",
           "available": true,
           "price": 96,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/brSdJ8P/sirsup-1065x684-r.jpg",
@@ -2241,7 +1215,7 @@
           "name": "Revo",
           "available": true,
           "price": 68,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg",
@@ -2252,7 +1226,7 @@
           "name": "Ігристе вино Dom Perignon",
           "available": true,
           "price": 62126,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/NnN3wbJ/53ed9f859e8f3f79929831f98b8c5741-800x800.jpg",
@@ -2306,7 +1280,7 @@
           "name": "Revo",
           "available": true,
           "price": 68,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/5cFNbSm/dcb178e4-ea66-9838-2af8-aa81a1d62a1f.jpg",
@@ -2317,7 +1291,7 @@
           "name": "Rom-cola",
           "available": true,
           "price": 30,
-          "type": "alcohol",
+          "type": "alcohols",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg",
@@ -2345,7 +1319,7 @@
           "name": "Рогань Світле",
           "available": false,
           "price": 14,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/mJfmz22/8580.jpg",
@@ -2356,7 +1330,7 @@
           "name": "Оболонь Світле",
           "available": true,
           "price": 10,
-          "type": "beer",
+          "type": "beers",
           "capacity": 0.5,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/mJfmz22/8580.jpg",
@@ -2367,7 +1341,7 @@
           "name": "Ramen",
           "available": true,
           "price": 126,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.45,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/LvsJ54f/tonkotsuramenfront-500x375.jpg",
@@ -2378,7 +1352,7 @@
           "name": "Гарбузовий суп-пюре з сиром",
           "available": true,
           "price": 126,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/3y21qmM/pexels-photo-1277483.webp",
@@ -2389,7 +1363,7 @@
           "name": "Гуцульський бограч",
           "available": true,
           "price": 106,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/Snzc2Vk/apelsinoviy-sik-korisni-vlastivosti-i-protipokazannya-0.jpg",
@@ -2400,11 +1374,112 @@
           "name": "Сирний суп",
           "available": true,
           "price": 96,
-          "type": "soup",
+          "type": "soups",
           "capacity": 0.52,
           "description": "Для  хорошого настрою  ",
           "img": "https://i.ibb.co/brSdJ8P/sirsup-1065x684-r.jpg",
           "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Vita",
+      "phone": "534534534",
+      "street": "",
+      "houseNumber": "",
+      "flatNum": "",
+      "porch": "",
+      "floor": "",
+      "comment": "",
+      "callBack": true,
+      "person": "6",
+      "agreement": true,
+      "restaurant": "malibu",
+      "id": 1653828031365,
+      "orderList": [
+        {
+          "id": 79,
+          "name": "Шампанське Moet Chandon Rose",
+          "available": true,
+          "price": 2126,
+          "type": "alcohols",
+          "capacity": 0.52,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/Lv2TzQZ/moet-et-chandon-rose-bouteille-700x700.jpg",
+          "amount": 1
+        },
+        {
+          "id": 21,
+          "name": "Ром Кептен Морган Оріджинал Спайсед Голд",
+          "available": true,
+          "price": 269,
+          "type": "alcohols",
+          "capacity": 0.52,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/SKwDsF4/177d10c0-e6db-11ea-ada0-dda8a523dc07.jpg",
+          "amount": 2
+        },
+        {
+          "id": 11,
+          "name": "Пів лобстера гриль",
+          "available": true,
+          "price": 249,
+          "type": "hotDish",
+          "weight": 90,
+          "description": "ЛАКШЕРІ ",
+          "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png",
+          "amount": 2
+        },
+        {
+          "id": 18,
+          "name": "Горілка Козацька Рада «Класична»",
+          "available": true,
+          "price": 149,
+          "type": "alcohols",
+          "capacity": 0.52,
+          "description": "Для  хорошого настрою  ",
+          "img": "https://i.ibb.co/8BtztM1/kozacka-rada-gorilka-klasichna-40-1-l-sklo.jpg",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "name": "ivasd45",
+      "phone": "345345354",
+      "street": "",
+      "houseNumber": "",
+      "flatNum": "",
+      "porch": "",
+      "floor": "",
+      "comment": "",
+      "callBack": true,
+      "person": "4",
+      "agreement": true,
+      "restaurant": "legend",
+      "id": 1653924469210,
+      "orderList": [
+        {
+          "id": 11,
+          "name": "Пів лобстера гриль",
+          "available": true,
+          "price": 249,
+          "type": "hotDish",
+          "weight": 90,
+          "description": "ЛАКШЕРІ ",
+          "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png",
+          "amount": 2
+        },
+        {
+          "name": "Крабсбургер",
+          "description": "Хто проживає на дні океана",
+          "price": 299,
+          "type": "snacks",
+          "img": "https://avatars.mds.yandex.net/get-zen_doc/1899873/pub_5d7bfea743fdc000c3a7d3f6_5d7c021b3639e600ad376bd3/scale_1200",
+          "capacity": "",
+          "available": true,
+          "weight": "399",
+          "id": 1653923882411,
+          "amount": 3
         }
       ]
     }
