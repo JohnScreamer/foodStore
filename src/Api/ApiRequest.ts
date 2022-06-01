@@ -1,5 +1,6 @@
 import axios from "axios";
-import { IFilter } from "../InterfacesTypes/GoodsInterface";
+import { IFormOrder } from "../InterfacesTypes/FormOrderTypes";
+import { IDefaultSetGoods, IFilter } from "../InterfacesTypes/GoodsInterface";
 import { ILogInData, IProfile } from "../Redux/Reducers/UserProfile";
 
 const URL = "http://localhost:3003";
@@ -11,18 +12,21 @@ export const BaseRequest = axios.create({
 
 export const FetchAllGoods = () => BaseRequest.get("allGoods");
 export const GetFetchGoods = (goodsType: string) =>
-    BaseRequest.get(`${goodsType}`);
+    BaseRequest.get<Array<IDefaultSetGoods>>(`${goodsType}`);
 
 export const FetchOneGoodsType = (goodsType: string) => {
-    return BaseRequest.get(`/allGoods?type=${goodsType}`);
+    return BaseRequest.get<Array<IDefaultSetGoods>>(
+        `/allGoods?type=${goodsType}`
+    );
 };
 export const FetchOneItem = (id: number) => {
-    return BaseRequest.get(`allGoods?id=${id}`);
+    return BaseRequest.get<Array<IDefaultSetGoods>>(`allGoods?id=${id}`);
 };
 export const FetchAllNoFilterGoods = (page: number) => {
     return async () => {
         const totalPages = Math.ceil(
-            (await BaseRequest.get(`allGoods`)).data.length / 10
+            (await BaseRequest.get<Array<IDefaultSetGoods>>(`allGoods`)).data
+                .length / 10
         );
         const currentPage = await BaseRequest.get(
             `allGoods?_page=${page}&_limit=10`
@@ -32,17 +36,19 @@ export const FetchAllNoFilterGoods = (page: number) => {
 };
 //--------------------------------
 export const getTotalItem = (url: string) => {
-    return BaseRequest.get(`${url}`);
+    return BaseRequest.get<Array<IDefaultSetGoods>>(`${url}`);
 };
 export const getAllTotalGoods = (url: string) => {
-    return BaseRequest.get(`${url}`);
+    return BaseRequest.get<Array<IDefaultSetGoods>>(`${url}`);
 };
 //------------------------------
 
 export const FetchFilterGoods = (data: IFilter) => {
     const byPrice = data.byPrice ? `&_sort=price&_order=${data.byPrice}` : "";
     const byType = data.byType ? `&type=${data.byType}` : "";
-    return BaseRequest.get(`allGoods?${byPrice + byType}`);
+    return BaseRequest.get<Array<IDefaultSetGoods>>(
+        `allGoods?${byPrice + byType}`
+    );
 };
 
 export const FetchAddOrder = (order: any) => {
@@ -62,7 +68,7 @@ export const FetchLogIn = (logInData: ILogInData) => {
 };
 ////admin///
 export const FetchGetAllOrders = () => {
-    return BaseRequest.get("/orders?_sort=id");
+    return BaseRequest.get<Array<IFormOrder>>("/orders?_sort=id");
 };
 export const FetchGetAllProfiles = () => {
     return BaseRequest.get("/Profile");

@@ -5,6 +5,7 @@ import EditCardForm from "../../Components/EditCardForm/EditCardForm";
 import ModalWindow from "../../Components/ModalWindow/ModalWindow";
 import SectionName from "../../Components/SectionName/SectionName";
 import { useAppDispatch, useAppSelector } from "../../Hooks/common";
+import { RequestAllGoods } from "../../Redux/Reducers/GoodsReducer";
 import {
     AddNewGoods,
     cleanEditGoods,
@@ -33,6 +34,7 @@ const EditCard: FC = () => {
         if (goods) {
             dispatch(DeleteGoods(goods.id));
             setModalDeleteStatus(true);
+            dispatch(RequestAllGoods());
         }
     };
 
@@ -46,6 +48,7 @@ const EditCard: FC = () => {
                 })
             );
             setModalStatus(true);
+            dispatch(RequestAllGoods());
         } else {
             dispatch(
                 AddNewGoods({
@@ -55,6 +58,7 @@ const EditCard: FC = () => {
                 })
             );
             setModalStatus(true);
+            dispatch(RequestAllGoods());
         }
     };
     console.log(errors);

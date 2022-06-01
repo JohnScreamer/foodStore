@@ -74,6 +74,7 @@ const GoodsReducer = createSlice({
                         : //@ts-ignore
                           !state.goods[goodsItem.type].find(
                               (el: any) => el.id === goodsItem.id
+                              //@ts-ignore
                           ) &&
                           //@ts-ignore
                           (state.goods[goodsItem.type] = [
@@ -86,8 +87,8 @@ const GoodsReducer = createSlice({
             .addCase(RequestOneGoodsType.fulfilled, (state, action) => {
                 const goodsType = action.payload.type;
                 state.isLoading = false;
-                if (!state.goods[goodsType])
-                    state.goods[goodsType] = action.payload.data;
+
+                state.goods[goodsType] = action.payload.data;
             })
             .addCase(RequestOneGoodsType.pending, (state) => {
                 state.isLoading = true;
@@ -156,6 +157,7 @@ export const RequestAllGoods = createAsyncThunk<
     if (response.status > 300 || response.status < 199) {
         return rejectWithValue("Error , not get goods(");
     }
+    console.log(response.data);
 
     return response.data;
 });

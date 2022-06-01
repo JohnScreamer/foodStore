@@ -8,6 +8,7 @@ const Footer: FC<IFotter> = ({ headerRef }) => {
     const scrollToHeader = () => {
         headerRef.current.scrollIntoView();
     };
+
     return (
         <footer className={s.footer}>
             <div className={s.container}>

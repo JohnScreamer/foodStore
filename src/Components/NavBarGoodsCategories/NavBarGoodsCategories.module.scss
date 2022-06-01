@@ -3,6 +3,7 @@
 .navWrapper {
     max-width: 1920px;
     overflow: hidden;
+    margin: 0 auto;
 
     padding: 0 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -12,7 +13,9 @@
     font-size: 18px;
     @include adaptive-value("font-size", 18, 15);
     line-height: 21px;
-    display: flex;
+    margin: 0 auto;
+    max-width: 1302px;
+    justify-content: space-between;
     li {
         a {
             display: inline-block;

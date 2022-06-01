@@ -131,16 +131,12 @@ input {
 //     display: flex;
 //     justify-content: center;
 // }
-// .navBarInner .swiper-wrapper {
-//     max-width: 1302px;
-//     margin: 0 auto;
-//     overflow: visible;
-//     a {
-//     }
-// }
+.navBarInner .swiper-wrapper {
+}
 .swiper-slide li .active {
     border-bottom: solid 3px $greenDeep;
 }
+
 @keyframes ldio-oqvkl7tdmkg {
     0% {
         opacity: 1;

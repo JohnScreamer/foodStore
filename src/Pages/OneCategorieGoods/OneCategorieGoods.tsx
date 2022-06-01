@@ -36,7 +36,7 @@ const OneCategorieGoods = () => {
                     | "snacks"
             )
         );
-    }, []);
+    }, [categorie]);
 
     const goodsList = goods?.map(
         (
