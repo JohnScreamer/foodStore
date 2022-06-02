@@ -24,6 +24,7 @@ const EditCard: FC = () => {
     const dispatch = useAppDispatch();
     const [showModal, setModalStatus] = useState(false);
     const [showModalDelete, setModalDeleteStatus] = useState(false);
+    console.log("edit rendering");
 
     useEffect(() => {
         return () => {

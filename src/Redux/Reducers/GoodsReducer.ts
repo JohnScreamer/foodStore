@@ -157,7 +157,6 @@ export const RequestAllGoods = createAsyncThunk<
     if (response.status > 300 || response.status < 199) {
         return rejectWithValue("Error , not get goods(");
     }
-    console.log(response.data);
 
     return response.data;
 });

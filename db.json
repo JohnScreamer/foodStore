@@ -14,11 +14,12 @@
       "id": 11,
       "name": "Пів лобстера гриль",
       "available": true,
-      "price": 249,
+      "price": 259,
       "type": "hotDish",
-      "weight": 90,
+      "weight": "90",
       "description": "ЛАКШЕРІ ",
-      "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png"
+      "img": "https://i.ibb.co/Zxh0RRF/6362b646f3c58dfae9bf46f1d4fef643-826x0.png",
+      "capacity": ""
     },
     {
       "id": 12,
@@ -136,9 +137,9 @@
       "id": 77,
       "name": "Вино 777",
       "available": true,
-      "price": 76,
+      "price": 176,
       "type": "alcohols",
-      "capacity": 0.52,
+      "capacity": "0.52",
       "description": "Для  хорошого настрою  ",
       "img": "https://i.ibb.co/WvTH5bT/bahus-portvejn-777-vino-beloe-polusladkoe-1-l.jpg"
     },
@@ -217,8 +218,8 @@
       "name": "Борщ",
       "available": true,
       "price": 105,
-      "type": "hotDish",
-      "capacity": 0.45,
+      "type": "soups",
+      "capacity": "0.45",
       "description": "Просто їда",
       "img": "https://i.ibb.co/MR1F5Q7/Postnyi-borsh-polesia-site-Web.jpg"
     },

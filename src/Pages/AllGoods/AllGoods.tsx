@@ -51,6 +51,8 @@ const AllGoods: FC = () => {
             };
         });
     };
+    console.log("rendering");
+
     useEffect(() => {
         if (formstatus.byPrice) param.price = formstatus.byPrice;
         if (formstatus.byType) param.type = formstatus.byType;

@@ -81,7 +81,7 @@ const EditCardForm: FC<any> = ({ register, control, errors, goods }) => {
                 />
                 <label
                     htmlFor="type"
-                    className={classNames({
+                    className={classNames(s.labelError, {
                         [s.error]: errors.capacity,
                     })}
                 >
