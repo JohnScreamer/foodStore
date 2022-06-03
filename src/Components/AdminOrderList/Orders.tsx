@@ -1,16 +1,10 @@
 import { FC } from "react";
 import s from "./AdminOrderList.module.scss";
-import {
-    IDrinks,
-    ISoup,
-    IAlcohols,
-    IBeer,
-    IHotDish,
-    ISnack,
-} from "../../InterfacesTypes/GoodsInterface";
+
+import { AllGoodsType } from "../../InterfacesTypes/ReducersInterface";
 
 interface IOrders {
-    orderArr: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
+    orderArr: Array<AllGoodsType>;
 }
 
 const Orders: FC<IOrders> = ({ orderArr }) => {

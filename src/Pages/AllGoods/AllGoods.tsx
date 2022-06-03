@@ -24,7 +24,7 @@ import { useSearchParams } from "react-router-dom";
 
 const AllGoods: FC = () => {
     const { control, handleSubmit } = useForm();
-    const { error, isLoading } = useAppSelector((state) => state.goods);
+    const isLoading = useAppSelector((state) => state.goods.isLoading);
     const dispatch = useAppDispatch();
     const { sortPriceType, forTotalPages } = useRequest(10, "allGoods");
     const [urlParams, setUrlParams] = useSearchParams();

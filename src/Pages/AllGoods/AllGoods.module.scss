@@ -13,8 +13,12 @@
 
         .cardWrapper {
             width: 325px;
+
             @include adaptive-value("width", 325, 250);
+            @include adaptive-value("height", 350, 250);
             min-height: 360px;
+            @include adaptive-value("min-height", 350, 300);
+
             margin: 15px;
             transition: $trans1;
 

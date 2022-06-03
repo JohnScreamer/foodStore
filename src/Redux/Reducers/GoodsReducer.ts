@@ -1,4 +1,8 @@
 import {
+    AllGoodsNameType,
+    AllGoodsType,
+} from "./../../InterfacesTypes/ReducersInterface";
+import {
     FetchAllGoods,
     FetchDiscounList,
     FetchFilterGoods,
@@ -12,17 +16,7 @@ import {
     IDiscountList,
     IGoodsInitState,
 } from "../../InterfacesTypes/ReducersInterface";
-import {
-    IAlcohols,
-    IAllGods,
-    IBeer,
-    IDrinks,
-    IFilter,
-    IGoods,
-    IHotDish,
-    ISnack,
-    ISoup,
-} from "../../InterfacesTypes/GoodsInterface";
+import { IAllGods, IFilter } from "../../InterfacesTypes/GoodsInterface";
 
 const initialState: IGoodsInitState = {
     goods: {
@@ -149,7 +143,7 @@ export const { getDiscountItem } = GoodsReducer.actions;
 ///////////-----AsyncThunk-----///////////
 
 export const RequestAllGoods = createAsyncThunk<
-    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
+    Array<AllGoodsType>,
     undefined,
     { rejectValue: string }
 >("AllGoods/goods", async function (_, { rejectWithValue }) {
@@ -161,13 +155,13 @@ export const RequestAllGoods = createAsyncThunk<
     return response.data;
 });
 interface IRequestOneGoodsType {
-    data: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
-    type: "drinks" | "soups" | "alcohols" | "beers" | "hotDish" | "snacks";
+    data: Array<AllGoodsType>;
+    type: AllGoodsNameType;
 }
 
 export const RequestOneGoodsType = createAsyncThunk<
     IRequestOneGoodsType,
-    "drinks" | "soups" | "alcohols" | "beers" | "hotDish" | "snacks",
+    AllGoodsNameType,
     { rejectValue: string }
 >("RequestOneGoodsType/goods", async function (type, { rejectWithValue }) {
     const response = await FetchOneGoodsType(type);
@@ -178,7 +172,7 @@ export const RequestOneGoodsType = createAsyncThunk<
     return { data, type };
 });
 export const RequestOneGoodsItem = createAsyncThunk<
-    IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack,
+    AllGoodsType,
     number,
     { rejectValue: string }
 >("RequestOneGoodsItem/goods", async function (id, { rejectWithValue }) {
@@ -222,15 +216,15 @@ export const RequestDiscountList = createAsyncThunk<
 });
 
 export interface IGoodsRequest {
-    data: Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>;
+    data: Array<AllGoodsType>;
     page: number;
 }
 interface IRequestGoodsReturn {
     page: number;
-    type: "drinks" | "soups" | "alcohols" | "beers" | "hotDish" | "snacks";
+    type: AllGoodsNameType;
 }
 export const RequestGoods = createAsyncThunk<
-    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
+    Array<AllGoodsType>,
     string,
     { rejectValue: string }
 >("RequestGoods", async (url, { rejectWithValue }) => {
@@ -240,7 +234,7 @@ export const RequestGoods = createAsyncThunk<
 });
 
 export const RequestTotalItem = createAsyncThunk<
-    Array<IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack>,
+    Array<AllGoodsType>,
     string,
     { rejectValue: string }
 >("RequestTotalItem", async (url, { rejectWithValue }) => {

@@ -9,6 +9,21 @@ import {
     ISoup,
 } from "./GoodsInterface";
 
+export type AllGoodsType =
+    | IDrinks
+    | ISoup
+    | IAlcohols
+    | IBeer
+    | IHotDish
+    | ISnack;
+export type AllGoodsNameType =
+    | "drinks"
+    | "soups"
+    | "alcohols"
+    | "beers"
+    | "hotDish"
+    | "snacks";
+
 export interface IGoodsInitState {
     goods: IGoods;
     isLoading: boolean;

@@ -87,7 +87,6 @@ const EditCard: FC = () => {
                     <SectionName>Редагувати товар</SectionName>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <EditCardForm
-                            control={control}
                             register={register}
                             errors={errors}
                             goods={goods}
@@ -125,11 +124,7 @@ const EditCard: FC = () => {
             <main className={s.wrapper}>
                 <SectionName>Створити товар</SectionName>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <EditCardForm
-                        control={control}
-                        register={register}
-                        errors={errors}
-                    />
+                    <EditCardForm register={register} errors={errors} />
                     <div className={s.btnWrapper}>
                         <CasualBtn submit br fill>
                             Добавити товар

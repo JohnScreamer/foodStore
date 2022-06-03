@@ -32,3 +32,19 @@
         transform: translateY(0);
     }
 }
+.logout {
+    display: block;
+    background: none;
+    font-size: 18px;
+    border-right: 1px solid red;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.admin {
+    display: flex;
+    flex-direction: column;
+    a {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+}

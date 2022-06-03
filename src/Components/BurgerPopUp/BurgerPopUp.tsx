@@ -1,6 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useAppSelector } from "../../Hooks/common";
+import { useAppDispatch, useAppSelector } from "../../Hooks/common";
+import { logOut } from "../../Redux/Reducers/UserProfile";
 import s from "./BurgerPopUp.module.scss";
 interface IBurgerPopUp {
     setPopUpStatus: (status: boolean) => void;
@@ -29,12 +30,16 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
             setPopUpStatus(false);
         }
     };
+    const dispatch = useAppDispatch();
     useEffect(() => {
         document.addEventListener("click", closePopUpBurger);
         return () => {
             document.removeEventListener("click", closePopUpBurger);
         };
     }, []);
+    const isAdmin = useAppSelector(
+        (state) => state.UserProfile.profile?.isAdmin
+    );
 
     return (
         <div className={s.burgerPopUp} ref={popUpBurgerRef}>
@@ -82,7 +87,30 @@ const BurgerPopUp: FC<IBurgerPopUp> = ({
                     <button onClick={() => GoTo("/discount")}>Акції</button>
                 </li>
                 {isAuth ? (
-                    <b> user {isAuth}</b>
+                    <>
+                        <b> user {isAuth}</b>
+
+                        {isAdmin && (
+                            <>
+                                {" "}
+                                <div className={s.admin}>
+                                    <NavLink to={"/admin"}>
+                                        <b>dashboard</b>
+                                    </NavLink>
+                                    <NavLink to={"/cardEditor"}>
+                                        <b>Add item</b>
+                                    </NavLink>
+                                </div>
+                            </>
+                        )}
+
+                        <button
+                            className={s.logout}
+                            onClick={() => dispatch(logOut())}
+                        >
+                            Log Out
+                        </button>
+                    </>
                 ) : (
                     <li>
                         <button onClick={() => setLoginStatus(true)}>

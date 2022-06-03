@@ -1,3 +1,4 @@
+import { AllGoodsType } from "./../../InterfacesTypes/ReducersInterface";
 import {
     FetchDeleteGoods,
     FetchGetAllOrders,
@@ -36,9 +37,9 @@ export interface IUserInitState {
     isLoading: boolean;
     error: null | string;
     lastOrder: IFormOrder | null;
-    profile?: IProfile;
+    profile?: IProfile | null;
     adminInfo: IAdminInfo;
-    editGoods: IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack | null;
+    editGoods: AllGoodsType | null;
 }
 
 const initialState: IUserInitState = {
@@ -57,16 +58,14 @@ const UserProfileReducer = createSlice({
     name: "UserProfile",
     initialState,
     reducers: {
-        addEditGoods: (
-            state,
-            action: PayloadAction<
-                IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack
-            >
-        ) => {
+        addEditGoods: (state, action: PayloadAction<AllGoodsType>) => {
             state.editGoods = action.payload;
         },
         cleanEditGoods: (state) => {
             state.editGoods = null;
+        },
+        logOut: (state) => {
+            state.profile = null;
         },
     },
     extraReducers(builder) {
@@ -141,7 +140,8 @@ const isError = (action: PayloadAction<any>) => {
 };
 
 export default UserProfileReducer.reducer;
-export const { addEditGoods, cleanEditGoods } = UserProfileReducer.actions;
+export const { addEditGoods, cleanEditGoods, logOut } =
+    UserProfileReducer.actions;
 
 export const addOrder = createAsyncThunk<any, any, { rejectValue: string }>(
     "addOrder/UserProfile",
@@ -228,7 +228,7 @@ export const EdithGoods = createAsyncThunk<
 
 export const AddNewGoods = createAsyncThunk<
     void,
-    IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack,
+    AllGoodsType,
     { rejectValue: string }
 >("EdithGoods/AddNewGoods", async function (goods, { rejectWithValue }) {
     const response = await FetchPostNewGoods(goods);

@@ -17,6 +17,9 @@
             min-height: 330px;
             margin: 15px;
             transition: $trans1;
+            @include adaptive-value("height", 350, 250);
+            min-height: 360px;
+            @include adaptive-value("min-height", 350, 300);
 
             &:hover {
                 transition: $trans1;

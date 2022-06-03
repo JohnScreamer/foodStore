@@ -1,11 +1,10 @@
-import { FC, MouseEventHandler, useEffect, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import BurgerPopUp from "../../Components/BurgerPopUp/BurgerPopUp";
 import Burger from "../../Components/Buttons/Burger/Burger";
 import ToCartBtn from "../../Components/Buttons/ToCartBtn/ToCartBtn";
-import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
-import PictureSlider from "../../Components/PictureSlider/PictureSlider";
-import { useAppSelector } from "../../Hooks/common";
+import { useAppDispatch, useAppSelector } from "../../Hooks/common";
+import { logOut } from "../../Redux/Reducers/UserProfile";
 import s from "./Header.module.scss";
 interface IHeader {
     setModalStatus: (status: boolean) => void;
@@ -13,12 +12,7 @@ interface IHeader {
     setSigIn: (status: boolean) => void;
     headerRef: any;
 }
-const Header: FC<IHeader> = ({
-    setModalStatus,
-    headerRef,
-    setLoginStatus,
-    setSigIn,
-}) => {
+const Header: FC<IHeader> = ({ setModalStatus, headerRef, setLoginStatus }) => {
     const searchRef = useRef(null);
     const inputRef: any = useRef(null);
     const data = useParams();
@@ -27,11 +21,13 @@ const Header: FC<IHeader> = ({
     const isAdmin = useAppSelector(
         (state) => state.UserProfile.profile?.isAdmin
     );
+    const dispatch = useAppDispatch();
     const show = (e: any) => {
         if (e.target !== searchRef.current) {
             inputRef.current.focus();
         }
     };
+
     const [showPopUpBurger, setPopUpStatus] = useState(false);
     return (
         <div className={s.headerWrapper}>
@@ -145,6 +141,9 @@ const Header: FC<IHeader> = ({
                         {name ? (
                             <div className={s.nameWrapper}>
                                 <NavLink to={"/"}>{name}</NavLink>
+                                <button onClick={() => dispatch(logOut())}>
+                                    Log Out
+                                </button>
                                 {isAdmin && (
                                     <>
                                         <NavLink to={"/admin"}>

@@ -1,14 +1,7 @@
 import { FC } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Hooks/common";
-import {
-    IDrinks,
-    ISoup,
-    IAlcohols,
-    IBeer,
-    IHotDish,
-    ISnack,
-} from "../../InterfacesTypes/GoodsInterface";
+import { AllGoodsType } from "../../InterfacesTypes/ReducersInterface";
 import {
     addToCart,
     removeItemFromCart,
@@ -19,7 +12,7 @@ import PlusMinusBtn from "../Buttons/PlusMinusBtn/PlusMinusBtn";
 import s from "./GoodsCard.module.scss";
 
 export interface IGoodsCard {
-    goods: IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack;
+    goods: AllGoodsType;
 }
 
 const GoodsCard: FC<IGoodsCard> = ({ goods }) => {

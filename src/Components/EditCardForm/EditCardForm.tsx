@@ -3,24 +3,17 @@ import { FC, useState } from "react";
 import {
     defaultEditValue,
     filterByName,
-    IAlcohols,
-    IBeer,
-    IDrinks,
-    IHotDish,
-    ISnack,
-    ISoup,
 } from "../../InterfacesTypes/GoodsInterface";
+import { AllGoodsType } from "../../InterfacesTypes/ReducersInterface";
 import CasualBtn from "../Buttons/CasualBtn/CasualBtn";
 import CardPreview from "./CardPreview";
 import s from "./EditCardForm.module.scss";
 interface IEditCardForm {
     register: any;
-    control: any;
     errors: any;
-    goods: IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack;
+    goods?: AllGoodsType;
 }
-
-const EditCardForm: FC<any> = ({ register, control, errors, goods }) => {
+const EditCardForm: FC<IEditCardForm> = ({ register, errors, goods }) => {
     const [defaultValue, setDefaultValue] = useState(goods || defaultEditValue);
     const [isWeight, setWeight] = useState(false);
     const typeOptions = filterByName.map((option) => (
@@ -28,9 +21,8 @@ const EditCardForm: FC<any> = ({ register, control, errors, goods }) => {
             {option.name}
         </option>
     ));
-
     const handlerChanger = (value: any, name: string) => {
-        setDefaultValue((state: any) => {
+        setDefaultValue((state) => {
             return { ...state, [name]: value };
         });
     };

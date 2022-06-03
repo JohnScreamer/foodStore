@@ -1,19 +1,14 @@
 import { useEffect } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import CasualBtn from "../../Components/Buttons/CasualBtn/CasualBtn";
 import GoodsCard from "../../Components/GoodsCard/GoodsCard";
 import LoadingCardList from "../../Components/LoadingCadList/LoadingCadList";
 import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
 import { useAppDispatch, useAppSelector } from "../../Hooks/common";
+
 import {
-    IAlcohols,
-    IBeer,
-    IDrinks,
-    IHotDish,
-    ISnack,
-    ISoup,
-} from "../../InterfacesTypes/GoodsInterface";
+    AllGoodsNameType,
+    AllGoodsType,
+} from "../../InterfacesTypes/ReducersInterface";
 import { RequestOneGoodsType } from "../../Redux/Reducers/GoodsReducer";
 import s from "./OneCategorieGoods.module.scss";
 
@@ -25,30 +20,17 @@ const OneCategorieGoods = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         window.scrollTo(0, 0);
-        dispatch(
-            RequestOneGoodsType(
-                categorie as
-                    | "drinks"
-                    | "soups"
-                    | "alcohols"
-                    | "beers"
-                    | "hotDish"
-                    | "snacks"
-            )
-        );
+        dispatch(RequestOneGoodsType(categorie as AllGoodsNameType));
     }, [categorie]);
+    console.log("renderOnetYPE");
 
-    const goodsList = goods?.map(
-        (
-            goodsItem: IDrinks | ISoup | IAlcohols | IBeer | IHotDish | ISnack
-        ) => (
-            <div key={goodsItem.name} className={s.cardWrapper}>
-                {" "}
-                <GoodsCard goods={goodsItem} />
-            </div>
-        )
-    );
-    const { error, isLoading } = useAppSelector((state) => state.goods);
+    const goodsList = goods?.map((goodsItem: AllGoodsType) => (
+        <div key={goodsItem.name} className={s.cardWrapper}>
+            {" "}
+            <GoodsCard goods={goodsItem} />
+        </div>
+    ));
+    const isLoading = useAppSelector((state) => state.goods.isLoading);
 
     return (
         <main className={s.wrapper}>

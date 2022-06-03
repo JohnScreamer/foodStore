@@ -39,17 +39,18 @@ export interface IHotDish extends ISnack {}
 export interface ISoup extends IDrinks {}
 export interface IBeer extends IDrinks {}
 export interface IAlcohols extends IDrinks {}
+type ByType =
+    | null
+    | "drinks"
+    | "soups"
+    | "alcohols"
+    | "beers"
+    | "hotDish"
+    | "snacks"
+    | any;
 
 export interface IFilter {
-    byType?:
-        | null
-        | "drinks"
-        | "soups"
-        | "alcohols"
-        | "beers"
-        | "hotDish"
-        | "snacks"
-        | any;
+    byType?: ByType;
     byPrice?: null | "fromExpensive" | "fromCheaper" | any;
     page: number | any;
 }
@@ -87,3 +88,4 @@ export const defaultEditValue = {
     capacity: "",
     weight: "",
 };
+export type DefaultEditValue = typeof defaultEditValue;

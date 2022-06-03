@@ -3,15 +3,12 @@ import Benefits from "../../Components/Benefits/Benefits";
 import CommonError from "../../Components/CommonError/CommonError";
 import GoodsCategories from "../../Components/GoodsCategories/GoodsCategories";
 import GoogleSection from "../../Components/GoogleSection/GoogleSection";
-import Input from "../../Components/Input/Input";
 import LoadingApiRequest from "../../Components/LoadingApiRequest/LoadingApiRequest";
 import ModalWindow from "../../Components/ModalWindow/ModalWindow";
 import NavBarGoodsCategories from "../../Components/NavBarGoodsCategories/NavBarGoodsCategories";
 import PictureSlider from "../../Components/PictureSlider/PictureSlider";
 import { useAppSelector } from "../../Hooks/common";
 import s from "./Main.module.scss";
-
-interface IMain {}
 
 const Main: FC = () => {
     const { alcohols, hotDish, beers } = useAppSelector(

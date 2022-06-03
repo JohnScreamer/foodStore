@@ -3,13 +3,7 @@ import { FC } from "react";
 import CasualBtn from "../../../Components/Buttons/CasualBtn/CasualBtn";
 import s from "./../OrderForm.module.scss";
 
-const Payment: FC<any> = ({
-    activeFieldsStatus,
-    setFieldsStatus,
-    errors,
-    register,
-    control,
-}) => {
+const Payment: FC<any> = ({ activeFieldsStatus, setFieldsStatus }) => {
     const handlerPaymentType = (
         type: "cash" | "onlineCard" | "courierCard"
     ) => {

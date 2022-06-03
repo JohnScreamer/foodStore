@@ -7,9 +7,7 @@ import style from "./DeliweryTime.module.scss";
 const DeliveryTime: FC<any> = ({
     activeFieldsStatus,
     setFieldsStatus,
-    errors,
     register,
-    control,
 }) => {
     const handlerDeliveryTime = (type: "inTime" | "asFast") => {
         setFieldsStatus((state: any) => {

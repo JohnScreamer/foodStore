@@ -2,14 +2,7 @@ import classNames from "classnames";
 import { FC } from "react";
 import CasualBtn from "../../../Components/Buttons/CasualBtn/CasualBtn";
 import s from "./../OrderForm.module.scss";
-const Agreement: FC<any> = ({
-    activeFieldsStatus,
-    setFieldsStatus,
-
-    errors,
-    register,
-    control,
-}) => {
+const Agreement: FC<any> = ({ errors, register }) => {
     return (
         <>
             <div className={classNames(s.section, s.agreement, s.relative)}>
